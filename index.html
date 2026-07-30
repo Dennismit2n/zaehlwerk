@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zählwerk · Deine Claude-Code-Nutzung in Zahlen</title>
+  <meta name="description" content="Wertet die lokalen Protokolle von Claude Code aus: Verbrauch pro Tag, Modell und Projekt. Läuft vollständig im Browser — deine Dateien werden nicht hochgeladen.">
+  <link rel="canonical" href="https://dennismit2n.github.io/zaehlwerk/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Zählwerk">
+  <meta property="og:title" content="Zählwerk — deine Claude-Code-Nutzung in Zahlen">
+  <meta property="og:description" content="Ordner auswählen, fertig. Verbrauch nach Tag, Modell und Projekt. Nichts wird hochgeladen.">
+  <meta property="og:url" content="https://dennismit2n.github.io/zaehlwerk/">
+  <meta property="og:image" content="https://dennismit2n.github.io/zaehlwerk/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Zählwerk — Claude-Code-Nutzung auswerten. Kostenlos, ohne Anmeldung, ohne Upload.">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#4d7c0f">
+  <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Theme vor dem ersten Zeichnen: gespeicherte Wahl schlägt das System. -->
+  <script>try{var t=localStorage.getItem('zaehlwerk.theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
+  <!-- GoatCounter, anonym und ohne Cookies — im Fußbereich offengelegt. -->
+  <script data-goatcounter="https://dennis-mit-2n.goatcounter.com/count" async src="./js/vendor/count.js"></script>
+</head>
+<body>
+<div class="app-shell">
+
+  <header class="site-header">
+    <div class="brand">
+      <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="5" y="12" width="38" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="3"/>
+        <rect x="11" y="18" width="6" height="12" rx="1" fill="currentColor"/>
+        <rect x="21" y="18" width="6" height="12" rx="1" fill="currentColor" opacity=".65"/>
+        <rect x="31" y="18" width="6" height="12" rx="1" fill="currentColor" opacity=".35"/>
+      </svg>
+      <div class="brand-text">
+        <h1>Zählwerk</h1>
+        <p class="brand-claim" data-i18n="claim">Deine Claude-Code-Nutzung in Zahlen</p>
+      </div>
+    </div>
+    <div class="header-controls">
+      <label class="sr-only" for="lang" data-i18n="langLabel">Sprache</label>
+      <select id="lang" class="mini-select"></select>
+      <label class="sr-only" for="theme" data-i18n="themeLabel">Darstellung</label>
+      <select id="theme" class="mini-select">
+        <option value="system" data-i18n="themeSystem">System</option>
+        <option value="light" data-i18n="themeLight">Hell</option>
+        <option value="dark" data-i18n="themeDark">Dunkel</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- ─────────────────────────── Einstieg ─────────────────────────── -->
+  <main>
+  <section id="einstieg" class="panel intro">
+    <h2 data-i18n="introTitle">Ordner auswählen und loslegen</h2>
+    <p data-i18n="introLead">Zählwerk liest die Protokolle, die Claude Code auf deinem Rechner anlegt, und rechnet aus, wohin dein Verbrauch geht. Die Dateien bleiben dabei auf deinem Gerät — es gibt keinen Server, der sie entgegennehmen könnte.</p>
+
+    <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-describedby="pfadhilfe">
+      <svg viewBox="0 0 48 48" class="dropzone-icon" aria-hidden="true">
+        <path d="M6 14a3 3 0 0 1 3-3h10l4 5h16a3 3 0 0 1 3 3v18a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"
+              fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+      </svg>
+      <p class="dropzone-main" data-i18n="dropMain">Ordner hierher ziehen oder klicken</p>
+      <p class="dropzone-sub" data-i18n="dropSub">Es werden ausschließlich <code>.jsonl</code>-Dateien gelesen</p>
+      <input type="file" id="dateiwahl" webkitdirectory directory multiple hidden>
+    </div>
+
+    <div class="hint" id="pfadhilfe">
+      <p><strong data-i18n="pfadTitle">Wo liegt der Ordner?</strong></p>
+      <div class="pfad-liste">
+        <div class="pfad"><span class="pfad-os">Windows</span><code>%USERPROFILE%\.claude\projects</code></div>
+        <div class="pfad"><span class="pfad-os">macOS / Linux</span><code>~/.claude/projects</code></div>
+      </div>
+      <p class="hint-note" data-i18n="pfadNote">Der Ordner ist versteckt, weil sein Name mit einem Punkt beginnt. Im Explorer den Pfad einfach oben in die Adreßleiste eintippen; im Auswahlfenster genügt es, ihn dort einzufügen.</p>
+    </div>
+
+    <div class="fortschritt" id="fortschritt" hidden>
+      <div class="balken"><div class="balken-fuell" id="fortschrittFuell"></div></div>
+      <p class="fortschritt-text" id="fortschrittText"></p>
+    </div>
+
+    <p class="fehler" id="fehler" hidden role="alert"></p>
+  </section>
+
+  <!-- ─────────────────────────── Ergebnis ─────────────────────────── -->
+  <div id="ergebnis" hidden>
+
+    <section class="panel">
+      <div class="panel-kopf">
+        <h2 data-i18n="kennzahlenTitle">Auf einen Blick</h2>
+        <div class="panel-werkzeuge">
+          <label class="schalter">
+            <input type="checkbox" id="namenVerbergen">
+            <span data-i18n="namenVerbergen">Namen verbergen</span>
+          </label>
+          <button type="button" class="knopf-leise" id="neuLaden" data-i18n="neuLaden">Anderer Ordner</button>
+        </div>
+      </div>
+
+      <div class="kennzahlen">
+        <div class="kennzahl">
+          <span class="kennzahl-label" data-i18n="kzHeute">Heute</span>
+          <span class="kennzahl-wert" id="kzHeute">–</span>
+          <span class="kennzahl-zusatz" id="kzHeuteZusatz"></span>
+        </div>
+        <div class="kennzahl">
+          <span class="kennzahl-label" data-i18n="kzWoche">Diese Woche</span>
+          <span class="kennzahl-wert" id="kzWoche">–</span>
+          <span class="kennzahl-zusatz" id="kzWocheZusatz"></span>
+        </div>
+        <div class="kennzahl kennzahl-haupt">
+          <span class="kennzahl-label" data-i18n="kzGesamt">Verbrauch gesamt</span>
+          <span class="kennzahl-wert" id="kzGesamt">–</span>
+          <span class="kennzahl-zusatz" id="kzGesamtZusatz"></span>
+        </div>
+        <div class="kennzahl kennzahl-neben">
+          <span class="kennzahl-label" data-i18n="kzCache">Kontext erneut gelesen</span>
+          <span class="kennzahl-wert" id="kzCache">–</span>
+          <span class="kennzahl-zusatz" id="kzCacheZusatz"></span>
+        </div>
+      </div>
+
+      <details class="erklaerung">
+        <summary data-i18n="erklKennzahlen">Was bedeuten diese Zahlen?</summary>
+        <div class="erklaerung-inhalt">
+          <p data-i18n="erklKennzahlen1"><strong>Verbrauch gesamt</strong> zählt zusammen, was neu entstanden ist: was du getippt hast, was Claude geschrieben hat, und den Gesprächsverlauf, der neu in den Zwischenspeicher gelegt wurde.</p>
+          <p data-i18n="erklKennzahlen2"><strong>Kontext erneut gelesen</strong> steht bewußt daneben und nicht darin. Bei jeder Folgefrage wird der bisherige Verlauf noch einmal mitgezählt. Diese Zahl wächst also mit der Länge einer Sitzung, nicht mit deiner Arbeit — sie ist meist zwanzig- bis dreißigmal so groß wie der eigentliche Verbrauch und würde jede Gesamtsumme unbrauchbar machen.</p>
+          <p data-i18n="erklKennzahlen3">Ein Token ist grob ein halbes Wort. Genaue Kosten kann Zählwerk nicht ausrechnen: In den Protokollen steht kein Preis, und im Abonnement kostet Claude Code ohnehin nichts zusätzlich.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="tageTitle">Die letzten 30 Tage</h2>
+      <div class="tage" id="tage" role="img" aria-describedby="tageAlt"></div>
+      <p class="sr-only" id="tageAlt"></p>
+      <details class="erklaerung">
+        <summary data-i18n="erklTage">Wie liest man das?</summary>
+        <div class="erklaerung-inhalt">
+          <p data-i18n="erklTage1">Ein Balken je Tag, von links nach rechts bis heute. Die Höhe zeigt den Verbrauch dieses Tages im Verhältnis zum stärksten Tag des Zeitraums. Tage ohne Balken sind Tage, an denen du nicht mit Claude Code gearbeitet hast.</p>
+        </div>
+      </details>
+    </section>
+
+    <div class="spalten">
+      <section class="panel">
+        <h2 data-i18n="modelleTitle">Nach Modell</h2>
+        <div class="liste" id="modelle"></div>
+        <details class="erklaerung">
+          <summary data-i18n="erklModelle">Warum ist das interessant?</summary>
+          <div class="erklaerung-inhalt">
+            <p data-i18n="erklModelle1">Die verschiedenen Modelle sind unterschiedlich schnell und unterschiedlich gründlich. Wenn ein einzelnes Modell fast deinen ganzen Verbrauch ausmacht, lohnt der Gedanke, ob für einfache Arbeiten ein kleineres genügt.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="ordnerTitle">Nach Arbeitsordner</h2>
+        <div class="liste" id="ordner"></div>
+        <details class="erklaerung">
+          <summary data-i18n="erklOrdner">Woher kommen diese Namen?</summary>
+          <div class="erklaerung-inhalt">
+            <p data-i18n="erklOrdner1">Aus dem Verzeichnis, in dem Claude Code jeweils gestartet wurde. Gezeigt wird nur der letzte Ordnername — und nur dann mehr, wenn zwei Ordner sonst gleich hießen.</p>
+            <p data-i18n="erklOrdner2">Wenn hier fast alles unter einem einzigen Eintrag steht, heißt das schlicht, daß du Claude Code meist aus demselben Verzeichnis heraus benutzt.</p>
+          </div>
+        </details>
+      </section>
+    </div>
+
+    <section class="panel">
+      <h2 data-i18n="stundenTitle">Nach Tageszeit</h2>
+      <div class="stunden" id="stunden" role="img" aria-describedby="stundenAlt"></div>
+      <p class="sr-only" id="stundenAlt"></p>
+      <details class="erklaerung">
+        <summary data-i18n="erklStunden">Wie liest man das?</summary>
+        <div class="erklaerung-inhalt">
+          <p data-i18n="erklStunden1">Vierundzwanzig Säulen, eine je Stunde deines Tages, über den gesamten Zeitraum aufsummiert. Zeigt, wann du tatsächlich arbeitest — nicht wann du glaubst zu arbeiten.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="panel">
+      <h2 data-i18n="wochenTitle">Nach Woche</h2>
+      <div class="liste" id="wochen"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-kopf">
+        <h2 data-i18n="sitzungenTitle">Sitzungen</h2>
+        <span class="panel-zusatz" id="sitzungenZusatz"></span>
+      </div>
+      <div class="tabelle-huelle">
+        <table class="tabelle" id="sitzungen">
+          <thead>
+            <tr>
+              <th data-i18n="spBeginn">Beginn</th>
+              <th data-i18n="spDauer">Dauer</th>
+              <th data-i18n="spOrdner">Ordner</th>
+              <th class="rechts" data-i18n="spAntworten">Antworten</th>
+              <th class="rechts" data-i18n="spVerbrauch">Verbrauch</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <details class="erklaerung">
+        <summary data-i18n="erklSitzungen">Was ist eine Sitzung?</summary>
+        <div class="erklaerung-inhalt">
+          <p data-i18n="erklSitzungen1">Ein durchgehendes Gespräch mit Claude Code. Die Dauer ist der Abstand zwischen der ersten und der letzten Antwort — Pausen dazwischen zählen mit, denn Zählwerk kann nicht wissen, ob du Kaffee geholt oder nachgedacht hast.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="panel" id="zweigePanel">
+      <h2 data-i18n="zweigeTitle">Nach Git-Zweig</h2>
+      <div class="liste" id="zweige"></div>
+      <details class="erklaerung">
+        <summary data-i18n="erklZweige">Wozu das?</summary>
+        <div class="erklaerung-inhalt">
+          <p data-i18n="erklZweige1">Claude Code merkt sich, auf welchem Git-Zweig gearbeitet wurde. Wer je Aufgabe einen eigenen Zweig anlegt, sieht hier, welche Aufgabe wie viel gekostet hat. Ohne Git bleibt die Liste leer.</p>
+        </div>
+      </details>
+    </section>
+
+    <section class="panel">
+      <div class="panel-kopf">
+        <h2 data-i18n="technikTitle">Was gelesen wurde</h2>
+        <span class="panel-zusatz" id="technikZusatz"></span>
+      </div>
+      <div class="liste" id="technik"></div>
+      <details class="erklaerung">
+        <summary data-i18n="erklTechnik">Warum stehen hier zwei verschiedene Zahlen?</summary>
+        <div class="erklaerung-inhalt">
+          <p data-i18n="erklTechnik1">Eine einzelne Antwort steht mehrfach in den Protokollen — einmal je Block, aus dem sie besteht: Nachdenken, Text, Werkzeugaufruf. Jede dieser Zeilen trägt die vollständige Abrechnung der ganzen Antwort.</p>
+          <p data-i18n="erklTechnik2">Zählwerk erkennt das und zählt jede Antwort genau einmal. Würde man einfach alle Zeilen zusammenzählen, kämen ungefähr doppelt so hohe Zahlen heraus.</p>
+        </div>
+      </details>
+    </section>
+
+  </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="https://github.com/Dennismit2n/zaehlwerk" rel="noopener" data-i18n="ftQuellcode">Quellcode auf GitHub</a>
+      · <a href="https://dennismit2n.github.io/" rel="noopener" data-i18n="ftWerkstatt">Mehr Werkzeuge</a>
+    </p>
+    <p class="klein" data-i18n="ftLokal">Alles rechnet in deinem Browser. Deine Protokolle werden nicht hochgeladen und verlassen dein Gerät nicht.</p>
+    <p class="klein" data-i18n="ftHinweis">Übersetzungen teils maschinell — Korrekturen willkommen. Besucherzählung anonym per GoatCounter, ohne Cookies.</p>
+    <p class="klein" data-i18n="ftMarke">Zählwerk ist ein privates Werkzeug und steht in keiner Verbindung zu Anthropic. „Claude“ ist eine Marke von Anthropic PBC.</p>
+  </footer>
+
+</div>
+
+<script src="./js/i18n.js"></script>
+<script src="./js/auswertung.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>

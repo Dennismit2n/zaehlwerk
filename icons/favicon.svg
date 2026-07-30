@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Zählwerk">
+  <rect width="48" height="48" rx="10" fill="#4d7c0f"/>
+  <rect x="9" y="14" width="30" height="20" rx="3" fill="none" stroke="#f7fee7" stroke-width="2.5"/>
+  <rect x="14" y="19" width="5" height="10" rx="1" fill="#f7fee7"/>
+  <rect x="21.5" y="19" width="5" height="10" rx="1" fill="#f7fee7" opacity=".65"/>
+  <rect x="29" y="19" width="5" height="10" rx="1" fill="#f7fee7" opacity=".35"/>
+</svg>
