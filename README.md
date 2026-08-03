@@ -1,6 +1,6 @@
 # Zählwerk 📊
 
-**Where does your Claude Code usage actually go?** Pick a folder, and Zählwerk reads the logs Claude Code writes on your own machine — then breaks the numbers down by day, model, project, weekday and hour.
+**Where does your Claude Code usage actually go?** Pick a folder, and Zählwerk reads the logs Claude Code writes on your own machine — then breaks the numbers down by day, model, project, week and hour.
 
 ![Browser](https://img.shields.io/badge/Runs-in%20your%20browser-a3e635) ![No upload](https://img.shields.io/badge/Logs-never%20uploaded-4d7c0f) ![Languages](https://img.shields.io/badge/Languages-12-65a30d) ![Licence](https://img.shields.io/badge/Licence-MIT-6ee7b7)
 
@@ -12,7 +12,7 @@
 
 | | |
 |---|---|
-| 📊 **Counts what was actually used** | Input, output and newly cached context, added up per day, model, working folder, Git branch, weekday and hour of day. |
+| 📊 **Counts what was actually used** | Input, output and newly cached context, added up per day, model, working folder, Git branch, week and hour of day. |
 | 🧮 **Counts each reply exactly once** | A single reply appears several times in the logs — once per block it consists of (thinking, text, tool call), and *each* of those lines carries the full accounting. Adding them up naively roughly doubles every figure. Zählwerk de-duplicates by `message.id`. |
 | 🔍 **Separates re-read context** | Around 96 % of all counted tokens are conversation that gets counted again with every follow-up question. That number grows with session length, not with your work, so it is shown *beside* the total — never inside it. |
 | 🚫 **No percentage of your limit** | Your remaining allowance is not in these files. Zählwerk can only count what has been spent. |

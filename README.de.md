@@ -1,6 +1,6 @@
 # Zählwerk 📊
 
-**Wohin geht dein Claude-Code-Verbrauch eigentlich?** Ordner auswählen — Zählwerk liest die Protokolle, die Claude Code auf deinem eigenen Rechner anlegt, und schlüsselt die Zahlen auf: nach Tag, Modell, Projekt, Wochentag und Uhrzeit.
+**Wohin geht dein Claude-Code-Verbrauch eigentlich?** Ordner auswählen — Zählwerk liest die Protokolle, die Claude Code auf deinem eigenen Rechner anlegt, und schlüsselt die Zahlen auf: nach Tag, Modell, Projekt, Woche und Uhrzeit.
 
 ![Browser](https://img.shields.io/badge/L%C3%A4uft-im%20Browser-a3e635) ![Kein Upload](https://img.shields.io/badge/Protokolle-werden%20nicht%20hochgeladen-4d7c0f) ![Sprachen](https://img.shields.io/badge/Sprachen-12-65a30d) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-6ee7b7)
 
@@ -12,7 +12,7 @@
 
 | | |
 |---|---|
-| 📊 **Zählt, was wirklich verbraucht wurde** | Eingabe, Ausgabe und neu zwischengespeicherter Kontext, aufsummiert nach Tag, Modell, Arbeitsordner, Git-Zweig, Wochentag und Tageszeit. |
+| 📊 **Zählt, was wirklich verbraucht wurde** | Eingabe, Ausgabe und neu zwischengespeicherter Kontext, aufsummiert nach Tag, Modell, Arbeitsordner, Git-Zweig, Woche und Tageszeit. |
 | 🧮 **Zählt jede Antwort genau einmal** | Eine einzelne Antwort steht mehrfach in den Protokollen — einmal je Block, aus dem sie besteht (Nachdenken, Text, Werkzeugaufruf), und *jede* dieser Zeilen trägt die vollständige Abrechnung. Wer sie naiv zusammenzählt, verdoppelt ungefähr jede Zahl. Zählwerk entdoppelt über `message.id`. |
 | 🔍 **Trennt den erneut gelesenen Kontext ab** | Rund 96 % aller gezählten Token sind Gesprächsverlauf, der bei jeder Folgefrage nochmals mitgezählt wird. Diese Zahl wächst mit der Länge einer Sitzung, nicht mit deiner Arbeit — deshalb steht sie **neben** der Summe und niemals darin. |
 | 🚫 **Keine Prozentanzeige deines Limits** | Wie viel Kontingent dir noch bleibt, steht in diesen Dateien nicht. Zählwerk kann nur zählen, was verbraucht wurde. |
