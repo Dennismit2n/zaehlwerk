@@ -2,7 +2,7 @@
 
 **Wohin geht dein Claude-Code-Verbrauch eigentlich?** Ordner auswählen — Zählwerk liest die Protokolle, die Claude Code auf deinem eigenen Rechner anlegt, und schlüsselt die Zahlen auf: nach Tag, Modell, Projekt, Woche und Uhrzeit.
 
-![Browser](https://img.shields.io/badge/L%C3%A4uft-im%20Browser-a3e635) ![Kein Upload](https://img.shields.io/badge/Protokolle-werden%20nicht%20hochgeladen-4d7c0f) ![Sprachen](https://img.shields.io/badge/Sprachen-12-65a30d) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-6ee7b7)
+![Browser](https://img.shields.io/badge/L%C3%A4uft-im%20Browser-a3e635) ![Kein Upload](https://img.shields.io/badge/Protokolle-werden%20nicht%20hochgeladen-4d7c0f) ![Sprachen](https://img.shields.io/badge/Sprachen-14-65a30d) ![Lizenz](https://img.shields.io/badge/Lizenz-MIT-6ee7b7)
 
 **→ [dennismit2n.github.io/zaehlwerk](https://dennismit2n.github.io/zaehlwerk/)** · [English version of this file](README.md)
 
@@ -47,9 +47,9 @@ Statische Seite, kein Build-Schritt, keine Abhängigkeiten.
 |---|---:|---|
 | `js/auswertung.js` | 321 | die Rechnerei — läuft im Browser und unter Node, damit sie gegen echte Dateien prüfbar ist |
 | `js/app.js` | 499 | Dateien einlesen, Fortschritt, alle Ansichten zeichnen |
-| `js/i18n.js` | 963 | 12 Sprachen × 80 Schlüssel |
-| `css/style.css` | 348 | hell und dunkel, je ein Variablensatz |
-| `index.html` | 264 | Aufbau mit `data-i18n`-Haken |
+| `js/i18n.js` | 1177 | 14 Sprachen à 90 Schlüssel, mehr wo die Sprache eigene Mehrzahlformen braucht |
+| `css/style.css` | 369 | hell und dunkel, je ein Variablensatz |
+| `index.html` | 282 | Aufbau mit `data-i18n`-Haken |
 
 Mengenangaben laufen über `Intl.PluralRules`, Zahlen und Prozente über `Intl.NumberFormat` — so bekommt Russisch `1 ответ / 2 ответа / 5 ответов` und `1 500`, während Deutsch `1 Antwort / 2 Antworten` und `1.500` bekommt.
 
@@ -57,7 +57,7 @@ Mengenangaben laufen über `Intl.PluralRules`, Zahlen und Prozente über `Intl.N
 
 ## Sprachen
 
-Deutsch · English · Español · Français · Italiano · Português · Türkçe · Русский · हिन्दी · 中文 · 日本語 · 한국어
+Deutsch · English · Español · Français · Italiano · Nederlands · Polski · Português · Türkçe · Русский · हिन्दी · 中文 · 日本語 · 한국어
 
 Ein Teil der Übersetzungen ist maschinell entstanden. Korrekturen sind sehr willkommen — gern als Issue oder Pull Request.
 
