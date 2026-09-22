@@ -6,6 +6,8 @@
 
 **→ [dennismit2n.github.io/zaehlwerk](https://dennismit2n.github.io/zaehlwerk/)** · [Deutsche Fassung dieser Datei](README.de.md)
 
+<img src="assets/screenshot-de.webp" alt="Zählwerk before the first import: the area you drag the folder onto or click to pick it, below it where that folder lives on Windows and on macOS or Linux, and the pointer to Zählwerk Ticker." width="640">
+
 ---
 
 ## What it does — and what it does not
