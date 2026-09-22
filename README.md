@@ -24,8 +24,8 @@
 ## Getting started
 
 1. Open **[the tool](https://dennismit2n.github.io/zaehlwerk/)**
-2. Pick the folder — Windows `%USERPROFILE%\.claude\projects`, otherwise `~/.claude/projects`. It is hidden, so type the path straight into the file dialog's address bar.
-3. That's it. Every section has a **?** explaining how to read it.
+2. Pick the folder — Windows `%USERPROFILE%\.claude\projects`, otherwise `~/.claude/projects`. It is hidden, so type the path straight into the file dialog’s address bar.
+3. That’s it. Every section has a **?** explaining how to read it.
 
 ## Privacy
 
