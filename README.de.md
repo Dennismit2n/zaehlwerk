@@ -6,6 +6,8 @@
 
 **→ [dennismit2n.github.io/zaehlwerk](https://dennismit2n.github.io/zaehlwerk/)** · [English version of this file](README.md)
 
+<img src="assets/screenshot-de.webp" alt="Zählwerk vor dem ersten Einlesen: die Fläche, auf die man den Ordner zieht oder über die man ihn auswählt, darunter, wo dieser Ordner unter Windows und unter macOS oder Linux liegt, und der Hinweis auf den Zählwerk Ticker." width="640">
+
 ---
 
 ## Was es macht — und was nicht
