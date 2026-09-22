@@ -358,7 +358,7 @@ var I18N = {
     pfadTitle: 'Dove si trova la cartella?',
     pfadNote: 'La cartella è nascosta perché il nome inizia con un punto. In Esplora file basta digitare il percorso nella barra degli indirizzi; nella finestra di selezione è sufficiente incollarlo lì.',
     tickerTitel: 'Meglio in diretta che a posteriori?',
-    tickerText: '<strong>Zählwerk Ticker</strong> è un piccolo riquadro flottante per Windows: finestra di cinque ore in corso, totale del giorno, modelli. Legge gli stessi file, anch\'esso senza accesso alla rete.',
+    tickerText: '<strong>Zählwerk Ticker</strong> è un piccolo riquadro flottante per Windows: finestra di cinque ore in corso, totale del giorno, modelli. Legge gli stessi file, anch’esso senza accesso alla rete.',
     tickerDownload: 'Scarica per Windows',
     tickerQuellcode: 'Codice sorgente',
 
