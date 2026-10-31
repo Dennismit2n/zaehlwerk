@@ -520,6 +520,8 @@
         var wert = texte[el.getAttribute('data-i18n')];
         if (wert) el.innerHTML = wert;
       });
+      // Der Tab-Titel folgt der Sprache; im HTML steht nur die deutsche Fassung
+      if (texte.claim) document.title = 'Zählwerk · ' + texte.claim;
     }
     if (letzteAuswertung) alleAnzeigen();
   }
