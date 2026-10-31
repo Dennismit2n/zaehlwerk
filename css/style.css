@@ -103,6 +103,15 @@ body {
 }
 .mini-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
+/* Am Handy teilen sich Sprache und Darstellung eine Zeile. Ein Auswahlfeld ist so breit
+   wie sein längster Eintrag (it „Contrasto elevato chiaro“, ja „ハイコントラスト（ライト）“),
+   bei 320 px ragte es deshalb bis zu 36 px über den Rand. Jetzt kappt das Feld den Eintrag. */
+@media (max-width: 560px) {
+  .header-controls { flex: 1 1 100%; min-width: 0; }
+  .header-controls .mini-select { flex: 1 1 0; min-width: 0; width: 100%; }
+  .header-controls #theme { flex-grow: 1.6; }
+}
+
 /* ──────────────────────────── Flächen ──────────────────────────── */
 
 .panel {
