@@ -21,8 +21,10 @@
   <meta name="theme-color" content="#4d7c0f">
   <link rel="icon" href="./icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./css/style.css">
-  <!-- Theme vor dem ersten Zeichnen: gespeicherte Wahl schlägt das System. -->
-  <script>try{var t=localStorage.getItem('zaehlwerk.theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}</script>
+  <!-- Darstellung vor dem ersten Zeichnen: die gemeinsame Wahl aller Werkzeuge (werkstatt.darstellung,
+       sonst der alte Schlüssel), sonst entscheidet das System per CSS. data-vision trägt Hoher
+       Kontrast, Farbenblind und Umkehr; dieselbe Auflösung steht in js/app.js (darstellen). -->
+  <script>(function(){var v=null,r=document.documentElement,m=window.matchMedia,t=null,s=null;try{v=localStorage.getItem('werkstatt.darstellung')||localStorage.getItem('zaehlwerk.theme');}catch(e){}var d=!!(m&&m('(prefers-color-scheme: dark)').matches),k=!!(m&&m('(prefers-contrast: more)').matches);if(v==='light'||v==='dark'){t=v;}else if(v==='hc-dark'||v==='hc-light'){t=v.slice(3);s='contrast';}else if(v==='cvd-dark'||v==='cvd-light'){t=v.slice(4);s='cvd';}else if(v==='invert'){s='invert';}else if(v&&/dark/.test(v)){t='dark';}else if(v&&/light/.test(v)){t='light';}else if(k){t=d?'dark':'light';s='contrast';}if(t){r.setAttribute('data-theme',t);}if(s){r.setAttribute('data-vision',s);}})();</script>
   <!-- GoatCounter, anonym und ohne Cookies — im Fußbereich offengelegt. -->
   <script data-goatcounter="https://dennis-mit-2n.goatcounter.com/count" async src="./js/vendor/count.js"></script>
 </head>
@@ -50,6 +52,11 @@
         <option value="system" data-i18n="themeSystem">System</option>
         <option value="light" data-i18n="themeLight">Hell</option>
         <option value="dark" data-i18n="themeDark">Dunkel</option>
+        <option value="hc-dark" data-i18n="themeHcDark">Hoher Kontrast dunkel</option>
+        <option value="hc-light" data-i18n="themeHcLight">Hoher Kontrast hell</option>
+        <option value="cvd-dark" data-i18n="themeCvdDark">Farbenblind dunkel</option>
+        <option value="cvd-light" data-i18n="themeCvdLight">Farbenblind hell</option>
+        <option value="invert" data-i18n="themeInvert">Umgekehrte Farben</option>
       </select>
     </div>
   </header>
