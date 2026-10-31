@@ -424,21 +424,54 @@
       window.scrollTo(0, 0);
     });
 
+    // Darstellung: eine Wahl für die ganze Werkstatt (31.10.2026). Alle
+    // Werkzeuge liegen auf einem Ursprung und lesen werkstatt.darstellung,
+    // zaehlwerk.theme gilt nur noch als Rückfall. data-theme trägt hell/dunkel,
+    // data-vision Hoher Kontrast (contrast), Farbenblind (cvd) und Umkehr
+    // (invert). Dieselbe Auflösung steht im Kopf-Skript von index.html.
+    var GEMEINSAM = 'werkstatt.darstellung';
+    var WAHLEN = ['system', 'light', 'dark', 'hc-dark', 'hc-light', 'cvd-dark', 'cvd-light', 'invert'];
     var themeWahl = E('theme');
-    try {
-      var gespeichert = localStorage.getItem('zaehlwerk.theme');
-      themeWahl.value = (gespeichert === 'light' || gespeichert === 'dark') ? gespeichert : 'system';
-    } catch (x) {}
-    themeWahl.addEventListener('change', function () {
-      var wert = this.value;
-      if (wert === 'system') {
-        document.documentElement.removeAttribute('data-theme');
-        try { localStorage.removeItem('zaehlwerk.theme'); } catch (x) {}
-      } else {
-        document.documentElement.setAttribute('data-theme', wert);
-        try { localStorage.setItem('zaehlwerk.theme', wert); } catch (x) {}
+    function gespeicherteWahl() {
+      var v = null;
+      try { v = localStorage.getItem(GEMEINSAM) || localStorage.getItem('zaehlwerk.theme'); } catch (x) {}
+      if (WAHLEN.indexOf(v) >= 0) return v;
+      if (/dark/.test(v || '')) return 'dark';
+      if (/light/.test(v || '')) return 'light';
+      return 'system';
+    }
+    function medien(q) { return !!(window.matchMedia && window.matchMedia(q).matches); }
+    function darstellen(wert) {
+      var theme = null, vision = null;
+      if (wert === 'light' || wert === 'dark') theme = wert;
+      else if (wert === 'hc-dark' || wert === 'hc-light') { theme = wert.slice(3); vision = 'contrast'; }
+      else if (wert === 'cvd-dark' || wert === 'cvd-light') { theme = wert.slice(4); vision = 'cvd'; }
+      else if (wert === 'invert') vision = 'invert';
+      else if (medien('(prefers-contrast: more)')) {
+        theme = medien('(prefers-color-scheme: dark)') ? 'dark' : 'light';
+        vision = 'contrast';
       }
+      var wurzel = document.documentElement;
+      if (theme) wurzel.setAttribute('data-theme', theme); else wurzel.removeAttribute('data-theme');
+      if (vision) wurzel.setAttribute('data-vision', vision); else wurzel.removeAttribute('data-vision');
+    }
+    themeWahl.value = gespeicherteWahl();
+    themeWahl.addEventListener('change', function () {
+      darstellen(this.value);
+      try { localStorage.setItem(GEMEINSAM, this.value); } catch (x) {}
     });
+    // „System“ folgt dem Gerät live, auch bei „Kontrast erhöhen“
+    if (window.matchMedia) {
+      ['(prefers-color-scheme: dark)', '(prefers-contrast: more)'].forEach(function (q) {
+        var liste = window.matchMedia(q);
+        var folgen = function () { if (gespeicherteWahl() === 'system') darstellen('system'); };
+        if (liste.addEventListener) liste.addEventListener('change', folgen); else if (liste.addListener) liste.addListener(folgen);
+      });
+    }
+    // Eine Wahl in einem anderen Werkzeug-Tab oder vor dem Zurückkommen
+    function nochmal() { var v = gespeicherteWahl(); darstellen(v); themeWahl.value = v; }
+    window.addEventListener('storage', function (e) { if (e.key === GEMEINSAM) nochmal(); });
+    window.addEventListener('pageshow', function (e) { if (e.persisted) nochmal(); });
   }
 
   // Sprachauswahl füllen — solange nur Deutsch vorliegt, bleibt es dabei.
