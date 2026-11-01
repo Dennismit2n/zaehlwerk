@@ -25,7 +25,7 @@ var I18N = {
     themeInvert: 'Umgekehrte Farben',
 
     introTitle: 'Ordner auswählen und loslegen',
-    introLead: 'Zählwerk liest die Protokolle, die Claude Code auf deinem Rechner anlegt, und rechnet aus, wohin dein Verbrauch geht. Die Dateien bleiben dabei auf deinem Gerät — es gibt keinen Server, der sie entgegennehmen könnte.',
+    introLead: 'Zählwerk liest die Protokolle, die Claude Code auf deinem Rechner anlegt, und rechnet aus, wohin dein Verbrauch geht. Die Dateien bleiben dabei auf deinem Gerät, es gibt keinen Server, der sie entgegennehmen könnte.',
     dropMain: 'Ordner hierher ziehen oder klicken',
     dropSub: 'Es werden ausschließlich <code>.jsonl</code>-Dateien gelesen',
     pfadTitle: 'Wo liegt der Ordner?',
@@ -41,7 +41,7 @@ var I18N = {
     kzGesamt: 'Verbrauch gesamt', kzCache: 'Kontext erneut gelesen',
     erklKennzahlen: 'Was bedeuten diese Zahlen?',
     erklKennzahlen1: '<strong>Verbrauch gesamt</strong> zählt zusammen, was neu entstanden ist: was du getippt hast, was Claude geschrieben hat, und den Gesprächsverlauf, der neu in den Zwischenspeicher gelegt wurde.',
-    erklKennzahlen2: '<strong>Kontext erneut gelesen</strong> steht bewußt daneben und nicht darin. Bei jeder Folgefrage wird der bisherige Verlauf noch einmal mitgezählt. Diese Zahl wächst also mit der Länge einer Sitzung, nicht mit deiner Arbeit — sie ist meist zwanzig- bis dreißigmal so groß wie der eigentliche Verbrauch und würde jede Gesamtsumme unbrauchbar machen.',
+    erklKennzahlen2: '<strong>Kontext erneut gelesen</strong> steht bewusst daneben und nicht darin. Bei jeder Folgefrage wird der bisherige Verlauf noch einmal mitgezählt. Diese Zahl wächst also mit der Länge einer Sitzung, nicht mit deiner Arbeit. Sie ist meist zwanzig- bis dreißigmal so groß wie der eigentliche Verbrauch und würde jede Gesamtsumme unbrauchbar machen.',
     erklKennzahlen3: 'Ein Token ist grob ein halbes Wort. Genaue Kosten kann Zählwerk nicht ausrechnen: In den Protokollen steht kein Preis, und im Abonnement kostet Claude Code ohnehin nichts zusätzlich.',
 
     tageTitle: 'Die letzten 30 Tage',
@@ -54,12 +54,12 @@ var I18N = {
 
     ordnerTitle: 'Nach Arbeitsordner',
     erklOrdner: 'Woher kommen diese Namen?',
-    erklOrdner1: 'Aus dem Verzeichnis, in dem Claude Code jeweils gestartet wurde. Gezeigt wird nur der letzte Ordnername — und nur dann mehr, wenn zwei Ordner sonst gleich hießen.',
+    erklOrdner1: 'Aus dem Verzeichnis, in dem Claude Code jeweils gestartet wurde. Gezeigt wird nur der letzte Ordnername (mehr nur dann, wenn zwei Ordner sonst gleich hießen).',
     erklOrdner2: 'Wenn hier fast alles unter einem einzigen Eintrag steht, heißt das schlicht, daß du Claude Code meist aus demselben Verzeichnis heraus benutzt.',
 
     stundenTitle: 'Nach Tageszeit',
     erklStunden: 'Wie liest man das?',
-    erklStunden1: 'Vierundzwanzig Säulen, eine je Stunde deines Tages, über den gesamten Zeitraum aufsummiert. Zeigt, wann du tatsächlich arbeitest — nicht wann du glaubst zu arbeiten.',
+    erklStunden1: 'Vierundzwanzig Säulen, eine je Stunde deines Tages, über den gesamten Zeitraum aufsummiert. Zeigt, wann du tatsächlich arbeitest, nicht wann du glaubst zu arbeiten.',
 
     wochenTitle: 'Nach Woche',
 
@@ -67,7 +67,7 @@ var I18N = {
     spBeginn: 'Beginn', spDauer: 'Dauer', spOrdner: 'Ordner',
     spAntworten: 'Antworten', spVerbrauch: 'Verbrauch',
     erklSitzungen: 'Was ist eine Sitzung?',
-    erklSitzungen1: 'Ein durchgehendes Gespräch mit Claude Code. Die Dauer ist der Abstand zwischen der ersten und der letzten Antwort — Pausen dazwischen zählen mit, denn Zählwerk kann nicht wissen, ob du Kaffee geholt oder nachgedacht hast.',
+    erklSitzungen1: 'Ein durchgehendes Gespräch mit Claude Code. Die Dauer ist der Abstand zwischen der ersten und der letzten Antwort. Pausen dazwischen zählen mit, denn Zählwerk kann nicht wissen, ob du Kaffee geholt oder nachgedacht hast.',
 
     zweigeTitle: 'Nach Git-Zweig',
     erklZweige: 'Wozu das?',
@@ -75,16 +75,16 @@ var I18N = {
 
     technikTitle: 'Was gelesen wurde',
     erklTechnik: 'Warum stehen hier zwei verschiedene Zahlen?',
-    erklTechnik1: 'Eine einzelne Antwort steht mehrfach in den Protokollen — einmal je Block, aus dem sie besteht: Nachdenken, Text, Werkzeugaufruf. Jede dieser Zeilen trägt die vollständige Abrechnung der ganzen Antwort.',
+    erklTechnik1: 'Eine einzelne Antwort steht mehrfach in den Protokollen, einmal je Block, aus dem sie besteht (Nachdenken, Text, Werkzeugaufruf). Jede dieser Zeilen trägt die vollständige Abrechnung der ganzen Antwort.',
     erklTechnik2: 'Zählwerk erkennt das und zählt jede Antwort genau einmal. Würde man einfach alle Zeilen zusammenzählen, kämen ungefähr doppelt so hohe Zahlen heraus.',
 
     ftQuellcode: 'Quellcode auf GitHub', ftWerkstatt: 'Mehr Werkzeuge',
     ftLokal: 'Alles rechnet in deinem Browser. Deine Protokolle werden nicht hochgeladen und verlassen dein Gerät nicht.',
-    ftHinweis: 'Übersetzungen teils maschinell — Korrekturen willkommen. Besucherzählung anonym per GoatCounter, ohne Cookies.',
+    ftHinweis: 'Übersetzungen teils maschinell, Korrekturen nehme ich gern an. Besucherzählung anonym per GoatCounter, ohne Cookies.',
     ftMarke: 'Zählwerk ist ein privates Werkzeug und steht in keiner Verbindung zu Anthropic. „Claude“ ist eine Marke von Anthropic PBC.',
 
     lese: 'Lese Datei', fertigRechnen: 'Rechne …',
-    fehlerKeine: 'In diesem Ordner liegen keine .jsonl-Dateien. Gemeint ist der Ordner „projects“ innerhalb von „.claude“ — nicht der Projektordner deines eigenen Vorhabens.',
+    fehlerKeine: 'In diesem Ordner liegen keine .jsonl-Dateien. Gemeint ist der Ordner „projects“ innerhalb von „.claude“, nicht der Projektordner deines eigenen Vorhabens.',
     antworten_one: 'Antwort', antworten_other: 'Antworten',
     token_one: 'Token', token_other: 'Token',
     sitzungen_one: 'Sitzung insgesamt', sitzungen_other: 'Sitzungen insgesamt',
@@ -113,7 +113,7 @@ var I18N = {
     themeInvert: 'Inverted colours',
 
     introTitle: 'Pick a folder and go',
-    introLead: 'Zählwerk reads the logs Claude Code writes on your machine and works out where your usage goes. The files stay on your device — there is no server that could receive them.',
+    introLead: 'Zählwerk reads the logs Claude Code writes on your machine and works out where your usage goes. The files stay on your device, there is no server that could receive them.',
     dropMain: 'Drop a folder here, or click',
     dropSub: 'Only <code>.jsonl</code> files are read',
     pfadTitle: 'Where is the folder?',
@@ -129,7 +129,7 @@ var I18N = {
     kzGesamt: 'Total usage', kzCache: 'Context re-read',
     erklKennzahlen: 'What do these numbers mean?',
     erklKennzahlen1: '<strong>Total usage</strong> adds up what was newly produced: what you typed, what Claude wrote, and the conversation newly placed into the cache.',
-    erklKennzahlen2: '<strong>Context re-read</strong> deliberately sits beside that figure, not inside it. Every follow-up question counts the previous conversation again. So this number grows with the length of a session, not with your work — it is typically twenty to thirty times the actual usage and would render any total meaningless.',
+    erklKennzahlen2: '<strong>Context re-read</strong> deliberately sits beside that figure, not inside it. Every follow-up question counts the previous conversation again. So this number grows with the length of a session, not with your work. It is typically twenty to thirty times the actual usage and would render any total meaningless.',
     erklKennzahlen3: 'A token is roughly half a word. Zählwerk cannot compute exact costs: the logs contain no prices, and on a subscription Claude Code costs nothing extra anyway.',
 
     tageTitle: 'The last 30 days',
@@ -142,12 +142,12 @@ var I18N = {
 
     ordnerTitle: 'By working folder',
     erklOrdner: 'Where do these names come from?',
-    erklOrdner1: 'From the directory Claude Code was started in. Only the last folder name is shown — and more only when two folders would otherwise look identical.',
+    erklOrdner1: 'From the directory Claude Code was started in. Only the last folder name is shown (more only when two folders would otherwise look identical).',
     erklOrdner2: 'If nearly everything sits under a single entry, that simply means you usually run Claude Code from the same directory.',
 
     stundenTitle: 'By time of day',
     erklStunden: 'How do you read this?',
-    erklStunden1: 'Twenty-four columns, one per hour of your day, summed across the whole period. It shows when you actually work — not when you think you do.',
+    erklStunden1: 'Twenty-four columns, one per hour of your day, summed across the whole period. It shows when you actually work, not when you think you do.',
 
     wochenTitle: 'By week',
 
@@ -155,7 +155,7 @@ var I18N = {
     spBeginn: 'Start', spDauer: 'Duration', spOrdner: 'Folder',
     spAntworten: 'Replies', spVerbrauch: 'Usage',
     erklSitzungen: 'What counts as a session?',
-    erklSitzungen1: 'One continuous conversation with Claude Code. The duration is the span between the first and last reply — breaks count towards it, because Zählwerk cannot tell whether you fetched coffee or were thinking.',
+    erklSitzungen1: 'One continuous conversation with Claude Code. The duration is the span between the first and last reply. Breaks count towards it, because Zählwerk cannot tell whether you fetched coffee or were thinking.',
 
     zweigeTitle: 'By Git branch',
     erklZweige: 'What is this for?',
@@ -163,16 +163,16 @@ var I18N = {
 
     technikTitle: 'What was read',
     erklTechnik: 'Why are there two different numbers here?',
-    erklTechnik1: 'A single reply appears several times in the logs — once per block it consists of: thinking, text, tool call. Each of those lines carries the full accounting for the entire reply.',
+    erklTechnik1: 'A single reply appears several times in the logs, once per block it consists of (thinking, text, tool call). Each of those lines carries the full accounting for the entire reply.',
     erklTechnik2: 'Zählwerk detects this and counts every reply exactly once. Simply adding up all lines would produce roughly double the real figures.',
 
     ftQuellcode: 'Source code on GitHub', ftWerkstatt: 'More tools',
     ftLokal: 'Everything is computed in your browser. Your logs are never uploaded and do not leave your device.',
-    ftHinweis: 'Some translations are machine-generated — corrections are welcome. Visitor counting is anonymous via GoatCounter, without cookies.',
+    ftHinweis: 'Some translations are machine-made, and I’m happy to take corrections. Visitor counting is anonymous via GoatCounter, without cookies.',
     ftMarke: 'Zählwerk is a personal tool and is not affiliated with Anthropic. “Claude” is a trademark of Anthropic PBC.',
 
     lese: 'Reading file', fertigRechnen: 'Calculating …',
-    fehlerKeine: 'There are no .jsonl files in this folder. What is meant is the “projects” folder inside “.claude” — not the folder of your own project.',
+    fehlerKeine: 'There are no .jsonl files in this folder. What is meant is the “projects” folder inside “.claude”, not the folder of your own project.',
     antworten_one: 'reply', antworten_other: 'replies',
     token_one: 'token', token_other: 'tokens',
     sitzungen_one: 'session in total', sitzungen_other: 'sessions in total',
@@ -305,7 +305,7 @@ var I18N = {
     kzGesamt: 'Consommation totale', kzCache: 'Contexte relu',
     erklKennzahlen: 'Que signifient ces chiffres ?',
     erklKennzahlen1: '<strong>Consommation totale</strong> additionne ce qui a été produit de neuf : ce que vous avez tapé, ce que Claude a écrit et la conversation nouvellement placée en mémoire tampon.',
-    erklKennzahlen2: '<strong>Contexte relu</strong> figure volontairement à côté, et non dedans. Chaque question de suivi recompte la conversation précédente. Ce nombre croît donc avec la durée d’une session, pas avec votre travail — il vaut généralement vingt à trente fois la consommation réelle et rendrait tout total inutilisable.',
+    erklKennzahlen2: '<strong>Contexte relu</strong> figure volontairement à côté, et non dedans. Chaque question de suivi recompte la conversation précédente. Ce nombre croît donc avec la durée d’une session, pas avec votre travail. Il vaut généralement vingt à trente fois la consommation réelle et rendrait tout total inutilisable.',
     erklKennzahlen3: 'Un token correspond en gros à une demi-mot. Zählwerk ne peut pas calculer de coûts exacts : les journaux ne contiennent aucun prix et, avec un abonnement, Claude Code ne coûte rien de plus.',
 
     tageTitle: 'Les 30 derniers jours',
@@ -318,12 +318,12 @@ var I18N = {
 
     ordnerTitle: 'Par dossier de travail',
     erklOrdner: 'D’où viennent ces noms ?',
-    erklOrdner1: 'Du répertoire depuis lequel Claude Code a été lancé. Seul le dernier nom de dossier est affiché — et davantage uniquement si deux dossiers seraient sinon identiques.',
+    erklOrdner1: 'Du répertoire depuis lequel Claude Code a été lancé. Seul le dernier nom de dossier est affiché (davantage uniquement si deux dossiers seraient sinon identiques).',
     erklOrdner2: 'Si presque tout se retrouve sous une seule entrée, cela signifie simplement que vous lancez Claude Code le plus souvent depuis le même répertoire.',
 
     stundenTitle: 'Par heure de la journée',
     erklStunden: 'Comment lire ce graphique ?',
-    erklStunden1: 'Vingt-quatre colonnes, une par heure de votre journée, cumulées sur toute la période. Montre quand vous travaillez réellement — pas quand vous croyez travailler.',
+    erklStunden1: 'Vingt-quatre colonnes, une par heure de votre journée, cumulées sur toute la période. Montre quand vous travaillez réellement, pas quand vous croyez travailler.',
 
     wochenTitle: 'Par semaine',
 
@@ -339,12 +339,12 @@ var I18N = {
 
     technikTitle: 'Ce qui a été lu',
     erklTechnik: 'Pourquoi deux chiffres différents ici ?',
-    erklTechnik1: 'Une même réponse apparaît plusieurs fois dans les journaux — une fois par bloc dont elle se compose : réflexion, texte, appel d’outil. Chacune de ces lignes porte la comptabilité complète de toute la réponse.',
+    erklTechnik1: 'Une même réponse apparaît plusieurs fois dans les journaux, une fois par bloc dont elle se compose (réflexion, texte, appel d’outil). Chacune de ces lignes porte la comptabilité complète de toute la réponse.',
     erklTechnik2: 'Zählwerk le détecte et compte chaque réponse exactement une fois. Additionner simplement toutes les lignes donnerait des chiffres environ deux fois trop élevés.',
 
     ftQuellcode: 'Code source sur GitHub', ftWerkstatt: 'Plus d’outils',
     ftLokal: 'Tout est calculé dans votre navigateur. Vos journaux ne sont jamais téléversés et ne quittent pas votre appareil.',
-    ftHinweis: 'Certaines traductions sont automatiques — les corrections sont bienvenues. Comptage des visites anonyme via GoatCounter, sans cookies.',
+    ftHinweis: 'Certaines traductions sont automatiques, j’accepte volontiers les corrections. Comptage des visites anonyme via GoatCounter, sans cookies.',
     ftMarke: 'Zählwerk est un outil personnel, sans lien avec Anthropic. « Claude » est une marque d’Anthropic PBC.',
 
     lese: 'Lecture du fichier', fertigRechnen: 'Calcul en cours …',
@@ -465,7 +465,7 @@ var I18N = {
     themeInvert: 'Omgekeerde kleuren',
 
     introTitle: 'Kies een map en begin',
-    introLead: 'Zählwerk leest de logboeken die Claude Code op je computer aanmaakt en rekent uit waar je verbruik heen gaat. De bestanden blijven daarbij op je apparaat — er is geen server die ze zou kunnen ontvangen.',
+    introLead: 'Zählwerk leest de logboeken die Claude Code op je computer aanmaakt en rekent uit waar je verbruik heen gaat. De bestanden blijven daarbij op je apparaat, er is geen server die ze zou kunnen ontvangen.',
     dropMain: 'Sleep een map hierheen of klik',
     dropSub: 'Er worden uitsluitend <code>.jsonl</code>-bestanden gelezen',
     pfadTitle: 'Waar staat de map?',
@@ -481,7 +481,7 @@ var I18N = {
     kzGesamt: 'Totaalverbruik', kzCache: 'Context opnieuw gelezen',
     erklKennzahlen: 'Wat betekenen deze cijfers?',
     erklKennzahlen1: '<strong>Totaalverbruik</strong> telt bij elkaar op wat nieuw is ontstaan: wat jij hebt getypt, wat Claude heeft geschreven en het gespreksverloop dat nieuw in het tussengeheugen is geplaatst.',
-    erklKennzahlen2: '<strong>Context opnieuw gelezen</strong> staat er bewust naast en niet erin. Bij elke vervolgvraag wordt het verloop tot dan toe nog een keer meegeteld. Dit getal groeit dus met de lengte van een sessie, niet met jouw werk — het is meestal twintig tot dertig keer zo groot als het eigenlijke verbruik en zou elk totaal onbruikbaar maken.',
+    erklKennzahlen2: '<strong>Context opnieuw gelezen</strong> staat er bewust naast en niet erin. Bij elke vervolgvraag wordt het verloop tot dan toe nog een keer meegeteld. Dit getal groeit dus met de lengte van een sessie, niet met jouw werk. Het is meestal twintig tot dertig keer zo groot als het eigenlijke verbruik en zou elk totaal onbruikbaar maken.',
     erklKennzahlen3: 'Een token is ruwweg een half woord. Precieze kosten kan Zählwerk niet uitrekenen: in de logboeken staat geen prijs, en met een abonnement kost Claude Code sowieso niets extra.',
 
     tageTitle: 'De afgelopen 30 dagen',
@@ -494,12 +494,12 @@ var I18N = {
 
     ordnerTitle: 'Per werkmap',
     erklOrdner: 'Waar komen deze namen vandaan?',
-    erklOrdner1: 'Uit de map waarin Claude Code telkens is gestart. Alleen de laatste mapnaam wordt getoond — en meer alleen als twee mappen anders hetzelfde zouden heten.',
+    erklOrdner1: 'Uit de map waarin Claude Code telkens is gestart. Alleen de laatste mapnaam wordt getoond (meer alleen als twee mappen anders hetzelfde zouden heten).',
     erklOrdner2: 'Als hier bijna alles onder één enkele vermelding staat, betekent dat simpelweg dat je Claude Code meestal vanuit dezelfde map gebruikt.',
 
     stundenTitle: 'Per uur van de dag',
     erklStunden: 'Hoe lees je dit?',
-    erklStunden1: 'Vierentwintig kolommen, één per uur van je dag, opgeteld over de hele periode. Laat zien wanneer je werkelijk werkt — niet wanneer je denkt te werken.',
+    erklStunden1: 'Vierentwintig kolommen, één per uur van je dag, opgeteld over de hele periode. Laat zien wanneer je werkelijk werkt, niet wanneer je denkt te werken.',
 
     wochenTitle: 'Per week',
 
@@ -507,7 +507,7 @@ var I18N = {
     spBeginn: 'Begin', spDauer: 'Duur', spOrdner: 'Map',
     spAntworten: 'Antwoorden', spVerbrauch: 'Verbruik',
     erklSitzungen: 'Wat is een sessie?',
-    erklSitzungen1: 'Eén doorlopend gesprek met Claude Code. De duur is de tijd tussen het eerste en het laatste antwoord — pauzes tellen mee, want Zählwerk kan niet weten of je koffie bent gaan halen of hebt zitten nadenken.',
+    erklSitzungen1: 'Eén doorlopend gesprek met Claude Code. De duur is de tijd tussen het eerste en het laatste antwoord. Pauzes tellen mee, want Zählwerk kan niet weten of je koffie bent gaan halen of hebt zitten nadenken.',
 
     zweigeTitle: 'Per Git-tak',
     erklZweige: 'Waar dient dat voor?',
@@ -515,16 +515,16 @@ var I18N = {
 
     technikTitle: 'Wat er is gelezen',
     erklTechnik: 'Waarom staan hier twee verschillende getallen?',
-    erklTechnik1: 'Eén afzonderlijk antwoord staat meerdere keren in de logboeken — één keer per blok waaruit het bestaat: nadenken, tekst, gereedschapsaanroep. Elk van die regels draagt de volledige telling van het hele antwoord.',
+    erklTechnik1: 'Eén afzonderlijk antwoord staat meerdere keren in de logboeken, één keer per blok waaruit het bestaat (nadenken, tekst, gereedschapsaanroep). Elk van die regels draagt de volledige telling van het hele antwoord.',
     erklTechnik2: 'Zählwerk herkent dat en telt elk antwoord precies één keer. Zou je simpelweg alle regels bij elkaar optellen, dan kwamen er ongeveer twee keer zo hoge getallen uit.',
 
     ftQuellcode: 'Broncode op GitHub', ftWerkstatt: 'Meer gereedschap',
     ftLokal: 'Alles wordt in je browser berekend. Je logboeken worden niet geüpload en verlaten je apparaat niet.',
-    ftHinweis: 'Vertalingen deels machinaal — correcties welkom. Bezoekerstelling anoniem via GoatCounter, zonder cookies.',
+    ftHinweis: 'Sommige vertalingen zijn machinaal gemaakt, correcties neem ik graag aan. Bezoekerstelling anoniem via GoatCounter, zonder cookies.',
     ftMarke: 'Zählwerk is een persoonlijk gereedschap en heeft geen enkele band met Anthropic. “Claude” is een handelsmerk van Anthropic PBC.',
 
     lese: 'Bestand inlezen', fertigRechnen: 'Berekenen …',
-    fehlerKeine: 'In deze map staan geen .jsonl-bestanden. Bedoeld wordt de map “projects” binnen “.claude” — niet de map van je eigen project.',
+    fehlerKeine: 'In deze map staan geen .jsonl-bestanden. Bedoeld wordt de map “projects” binnen “.claude”, niet de map van je eigen project.',
     antworten_one: 'antwoord', antworten_other: 'antwoorden',
     token_one: 'token', token_other: 'tokens',
     sitzungen_one: 'sessie in totaal', sitzungen_other: 'sessies in totaal',
@@ -553,7 +553,7 @@ var I18N = {
     themeInvert: 'Odwrócone kolory',
 
     introTitle: 'Wybierz folder i do dzieła',
-    introLead: 'Zählwerk czyta dzienniki, które Claude Code zapisuje na Twoim komputerze, i wylicza, na co idą Twoje tokeny. Pliki zostają przy tym na Twoim urządzeniu — nie ma serwera, który mógłby je przyjąć.',
+    introLead: 'Zählwerk czyta dzienniki, które Claude Code zapisuje na Twoim komputerze, i wylicza, na co idą Twoje tokeny. Pliki zostają przy tym na Twoim urządzeniu, nie ma serwera, który mógłby je przyjąć.',
     dropMain: 'Przeciągnij folder tutaj albo kliknij',
     dropSub: 'Czytane są wyłącznie pliki <code>.jsonl</code>',
     pfadTitle: 'Gdzie znajduje się ten folder?',
@@ -569,7 +569,7 @@ var I18N = {
     kzGesamt: 'Zużycie łącznie', kzCache: 'Kontekst odczytany ponownie',
     erklKennzahlen: 'Co oznaczają te liczby?',
     erklKennzahlen1: '<strong>Zużycie łącznie</strong> sumuje to, co powstało nowego: to, co wpisujesz, to, co pisze Claude, oraz przebieg rozmowy świeżo zapisany w pamięci podręcznej.',
-    erklKennzahlen2: '<strong>Kontekst odczytany ponownie</strong> jest celowo podany osobno, a nie wliczony do tamtej sumy. Przy każdym kolejnym pytaniu dotychczasowy przebieg rozmowy liczy się jeszcze raz. Ta liczba rośnie więc z długością sesji, a nie z Twoją pracą — jest zwykle od dwudziestu do trzydziestu razy większa niż właściwe zużycie i uczyniłaby każdą sumę bezużyteczną.',
+    erklKennzahlen2: '<strong>Kontekst odczytany ponownie</strong> jest celowo podany osobno, a nie wliczony do tamtej sumy. Przy każdym kolejnym pytaniu dotychczasowy przebieg rozmowy liczy się jeszcze raz. Ta liczba rośnie więc z długością sesji, a nie z Twoją pracą. Jest zwykle od dwudziestu do trzydziestu razy większa niż właściwe zużycie i uczyniłaby każdą sumę bezużyteczną.',
     erklKennzahlen3: 'Token to z grubsza pół słowa. Dokładnych kosztów Zählwerk policzyć nie potrafi: w dziennikach nie ma cen, a w abonamencie Claude Code i tak nie kosztuje nic więcej.',
 
     tageTitle: 'Ostatnie 30 dni',
@@ -582,12 +582,12 @@ var I18N = {
 
     ordnerTitle: 'Według folderu roboczego',
     erklOrdner: 'Skąd biorą się te nazwy?',
-    erklOrdner1: 'Z katalogu, w którym uruchomiono Claude Code. Pokazywana jest tylko ostatnia nazwa folderu — a więcej dopiero wtedy, gdy w przeciwnym razie dwa foldery nazywałyby się tak samo.',
+    erklOrdner1: 'Z katalogu, w którym uruchomiono Claude Code. Pokazywana jest tylko ostatnia nazwa folderu (więcej dopiero wtedy, gdy w przeciwnym razie dwa foldery nazywałyby się tak samo).',
     erklOrdner2: 'Jeśli niemal wszystko mieści się w jednej pozycji, znaczy to po prostu, że zwykle uruchamiasz Claude Code z tego samego katalogu.',
 
     stundenTitle: 'Według pory dnia',
     erklStunden: 'Jak to czytać?',
-    erklStunden1: 'Dwadzieścia cztery słupki, po jednym na każdą godzinę doby, zsumowane za cały okres. Pokazuje, kiedy naprawdę pracujesz — nie kiedy Ci się wydaje, że pracujesz.',
+    erklStunden1: 'Dwadzieścia cztery słupki, po jednym na każdą godzinę doby, zsumowane za cały okres. Pokazuje, kiedy naprawdę pracujesz, nie kiedy Ci się wydaje, że pracujesz.',
 
     wochenTitle: 'Według tygodnia',
 
@@ -595,7 +595,7 @@ var I18N = {
     spBeginn: 'Początek', spDauer: 'Czas trwania', spOrdner: 'Folder',
     spAntworten: 'Odpowiedzi', spVerbrauch: 'Zużycie',
     erklSitzungen: 'Czym jest sesja?',
-    erklSitzungen1: 'Jedna ciągła rozmowa z Claude Code. Czas trwania to odstęp między pierwszą a ostatnią odpowiedzią — przerwy wliczają się w ten czas, bo Zählwerk nie może wiedzieć, czy idziesz po kawę, czy myślisz.',
+    erklSitzungen1: 'Jedna ciągła rozmowa z Claude Code. Czas trwania to odstęp między pierwszą a ostatnią odpowiedzią. Przerwy wliczają się w ten czas, bo Zählwerk nie może wiedzieć, czy idziesz po kawę, czy myślisz.',
 
     zweigeTitle: 'Według gałęzi Git',
     erklZweige: 'Po co to?',
@@ -603,16 +603,16 @@ var I18N = {
 
     technikTitle: 'Co zostało wczytane',
     erklTechnik: 'Dlaczego są tu dwie różne liczby?',
-    erklTechnik1: 'Pojedyncza odpowiedź pojawia się w dziennikach kilkakrotnie — raz na każdy blok, z którego się składa: myślenie, tekst, wywołanie narzędzia. Każdy z tych wierszy zawiera pełne rozliczenie całej odpowiedzi.',
+    erklTechnik1: 'Pojedyncza odpowiedź pojawia się w dziennikach kilkakrotnie, raz na każdy blok, z którego się składa (myślenie, tekst, wywołanie narzędzia). Każdy z tych wierszy zawiera pełne rozliczenie całej odpowiedzi.',
     erklTechnik2: 'Zählwerk to rozpoznaje i liczy każdą odpowiedź dokładnie raz. Gdyby po prostu zsumować wszystkie wiersze, liczby wyszłyby mniej więcej dwa razy większe.',
 
     ftQuellcode: 'Kod źródłowy na GitHubie', ftWerkstatt: 'Więcej narzędzi',
     ftLokal: 'Wszystkie obliczenia odbywają się w Twojej przeglądarce. Twoje dzienniki nie są nigdzie wysyłane i nie opuszczają Twojego urządzenia.',
-    ftHinweis: 'Część tłumaczeń powstała maszynowo — poprawki mile widziane. Anonimowe zliczanie odwiedzin przez GoatCounter, bez ciasteczek.',
+    ftHinweis: 'Część tłumaczeń powstała maszynowo, chętnie przyjmę poprawki. Anonimowe zliczanie odwiedzin przez GoatCounter, bez ciasteczek.',
     ftMarke: 'Zählwerk jest prywatnym narzędziem i nie ma żadnego związku z Anthropic. „Claude” to znak towarowy firmy Anthropic PBC.',
 
     lese: 'Wczytywanie pliku', fertigRechnen: 'Obliczanie …',
-    fehlerKeine: 'W tym folderze nie ma plików .jsonl. Chodzi o folder „projects” wewnątrz „.claude” — nie o folder Twojego własnego projektu.',
+    fehlerKeine: 'W tym folderze nie ma plików .jsonl. Chodzi o folder „projects” wewnątrz „.claude”, nie o folder Twojego własnego projektu.',
     antworten_one: 'odpowiedź', antworten_few: 'odpowiedzi', antworten_many: 'odpowiedzi', antworten_other: 'odpowiedzi',
     token_one: 'token', token_few: 'tokeny', token_many: 'tokenów', token_other: 'tokena',
     sitzungen_one: 'sesja łącznie', sitzungen_few: 'sesje łącznie', sitzungen_many: 'sesji łącznie', sitzungen_other: 'sesji łącznie',
@@ -729,7 +729,7 @@ var I18N = {
     themeInvert: 'Ters renkler',
 
     introTitle: 'Bir klasör seçin ve başlayın',
-    introLead: 'Zählwerk, Claude Code’un bilgisayarınızda tuttuğu kayıtları okur ve tüketiminizin nereye gittiğini hesaplar. Dosyalar cihazınızda kalır — onları alabilecek bir sunucu yoktur.',
+    introLead: 'Zählwerk, Claude Code’un bilgisayarınızda tuttuğu kayıtları okur ve tüketiminizin nereye gittiğini hesaplar. Dosyalar cihazınızda kalır, onları alabilecek bir sunucu yoktur.',
     dropMain: 'Klasörü buraya sürükleyin veya tıklayın',
     dropSub: 'Yalnızca <code>.jsonl</code> dosyaları okunur',
     pfadTitle: 'Klasör nerede?',
@@ -745,7 +745,7 @@ var I18N = {
     kzGesamt: 'Toplam tüketim', kzCache: 'Yeniden okunan bağlam',
     erklKennzahlen: 'Bu sayılar ne anlama geliyor?',
     erklKennzahlen1: '<strong>Toplam tüketim</strong>, yeni ortaya çıkanı toplar: yazdıklarınızı, Claude’un yazdıklarını ve ara belleğe yeni alınan konuşma geçmişini.',
-    erklKennzahlen2: '<strong>Yeniden okunan bağlam</strong> bilinçli olarak yanında durur, içinde değil. Her yeni soruda önceki konuşma bir kez daha sayılır. Bu sayı çalışmanızla değil, oturumun uzunluğuyla büyür — genellikle gerçek tüketimin yirmi ila otuz katıdır ve her toplamı anlamsız kılar.',
+    erklKennzahlen2: '<strong>Yeniden okunan bağlam</strong> bilinçli olarak yanında durur, içinde değil. Her yeni soruda önceki konuşma bir kez daha sayılır. Bu sayı çalışmanızla değil, oturumun uzunluğuyla büyür. Genellikle gerçek tüketimin yirmi ila otuz katıdır ve her toplamı anlamsız kılar.',
     erklKennzahlen3: 'Bir token kabaca yarım kelimedir. Zählwerk kesin maliyet hesaplayamaz: kayıtlarda fiyat yoktur ve abonelikte Claude Code zaten ek ücret getirmez.',
 
     tageTitle: 'Son 30 gün',
@@ -758,12 +758,12 @@ var I18N = {
 
     ordnerTitle: 'Çalışma klasörüne göre',
     erklOrdner: 'Bu adlar nereden geliyor?',
-    erklOrdner1: 'Claude Code’un başlatıldığı dizinden. Yalnızca son klasör adı gösterilir — iki klasör aynı görünecekse ancak o zaman daha fazlası.',
+    erklOrdner1: 'Claude Code’un başlatıldığı dizinden. Yalnızca son klasör adı gösterilir (iki klasör aynı görünecekse ancak o zaman daha fazlası).',
     erklOrdner2: 'Neredeyse her şey tek bir satırda toplanıyorsa, bu yalnızca Claude Code’u çoğunlukla aynı dizinden çalıştırdığınız anlamına gelir.',
 
     stundenTitle: 'Günün saatine göre',
     erklStunden: 'Bu nasıl okunur?',
-    erklStunden1: 'Günün her saati için bir tane olmak üzere yirmi dört sütun, tüm dönem boyunca toplanmış. Gerçekte ne zaman çalıştığınızı gösterir — çalıştığınızı sandığınız zamanı değil.',
+    erklStunden1: 'Günün her saati için bir tane olmak üzere yirmi dört sütun, tüm dönem boyunca toplanmış. Gerçekte ne zaman çalıştığınızı gösterir, çalıştığınızı sandığınız zamanı değil.',
 
     wochenTitle: 'Haftaya göre',
 
@@ -771,7 +771,7 @@ var I18N = {
     spBeginn: 'Başlangıç', spDauer: 'Süre', spOrdner: 'Klasör',
     spAntworten: 'Yanıt', spVerbrauch: 'Tüketim',
     erklSitzungen: 'Oturum neye denir?',
-    erklSitzungen1: 'Claude Code ile kesintisiz süren bir konuşma. Süre, ilk ve son yanıt arasındaki aralıktır — aralar da sayılır, çünkü Zählwerk kahve almaya mı gittiğinizi yoksa düşündüğünüzü mü bilemez.',
+    erklSitzungen1: 'Claude Code ile kesintisiz süren bir konuşma. Süre, ilk ve son yanıt arasındaki aralıktır. Aralar da sayılır, çünkü Zählwerk kahve almaya mı gittiğinizi yoksa düşündüğünüzü mü bilemez.',
 
     zweigeTitle: 'Git dalına göre',
     erklZweige: 'Bu ne işe yarar?',
@@ -779,16 +779,16 @@ var I18N = {
 
     technikTitle: 'Neler okundu',
     erklTechnik: 'Burada neden iki farklı sayı var?',
-    erklTechnik1: 'Tek bir yanıt kayıtlarda birden çok kez yer alır — oluştuğu her blok için bir kez: düşünme, metin, araç çağrısı. Bu satırların her biri tüm yanıtın eksiksiz hesabını taşır.',
+    erklTechnik1: 'Tek bir yanıt kayıtlarda birden çok kez yer alır, oluştuğu her blok için bir kez (düşünme, metin, araç çağrısı). Bu satırların her biri tüm yanıtın eksiksiz hesabını taşır.',
     erklTechnik2: 'Zählwerk bunu fark eder ve her yanıtı tam olarak bir kez sayar. Tüm satırlar öylece toplansaydı, yaklaşık iki katı sayılar çıkardı.',
 
     ftQuellcode: 'GitHub’da kaynak kodu', ftWerkstatt: 'Diğer araçlar',
     ftLokal: 'Her şey tarayıcınızda hesaplanır. Kayıtlarınız yüklenmez ve cihazınızdan çıkmaz.',
-    ftHinweis: 'Bazı çeviriler makine çevirisidir — düzeltmeler memnuniyetle karşılanır. Ziyaretçi sayımı GoatCounter ile anonim, çerezsiz.',
+    ftHinweis: 'Bazı çeviriler otomatik oluşturuldu, düzeltmeleri memnuniyetle alırım. Ziyaretçi sayımı GoatCounter ile anonim, çerezsiz.',
     ftMarke: 'Zählwerk kişisel bir araçtır ve Anthropic ile bağlantısı yoktur. „Claude“, Anthropic PBC’nin markasıdır.',
 
     lese: 'Dosya okunuyor', fertigRechnen: 'Hesaplanıyor …',
-    fehlerKeine: 'Bu klasörde .jsonl dosyası yok. Kastedilen, „.claude“ içindeki „projects“ klasörüdür — kendi projenizin klasörü değil.',
+    fehlerKeine: 'Bu klasörde .jsonl dosyası yok. Kastedilen, „.claude“ içindeki „projects“ klasörüdür, kendi projenizin klasörü değil.',
     antworten_one: 'yanıt', antworten_other: 'yanıt',
     token_one: 'token', token_other: 'token',
     sitzungen_one: 'oturum toplam', sitzungen_other: 'oturum toplam',
@@ -817,13 +817,13 @@ var I18N = {
     themeInvert: 'Инверсия цветов',
 
     introTitle: 'Выберите папку и начните',
-    introLead: 'Zählwerk читает журналы, которые Claude Code сохраняет на вашем компьютере, и подсчитывает, куда уходит расход. Файлы остаются на вашем устройстве — нет сервера, который мог бы их получить.',
+    introLead: 'Zählwerk читает журналы, которые Claude Code сохраняет на вашем компьютере, и подсчитывает, куда уходит расход. Файлы остаются на вашем устройстве, нет сервера, который мог бы их получить.',
     dropMain: 'Перетащите папку сюда или нажмите',
     dropSub: 'Читаются только файлы <code>.jsonl</code>',
     pfadTitle: 'Где находится папка?',
     pfadNote: 'Папка скрыта, потому что её имя начинается с точки. В проводнике просто введите путь в адресную строку; в окне выбора достаточно вставить его туда.',
     tickerTitel: 'Хотите видеть это вживую, а не задним числом?',
-    tickerText: '<strong>Zählwerk Ticker</strong> — небольшое плавающее окошко для Windows: текущее пятичасовое окно, итог за день, модели. Читает те же файлы и тоже без доступа к сети.',
+    tickerText: '<strong>Zählwerk Ticker</strong> показывает в небольшом плавающем окошке для Windows текущее пятичасовое окно, итог за день, модели. Читает те же файлы и тоже без доступа к сети.',
     tickerDownload: 'Скачать для Windows',
     tickerQuellcode: 'Исходный код',
 
@@ -833,12 +833,12 @@ var I18N = {
     kzGesamt: 'Общий расход', kzCache: 'Контекст перечитан',
     erklKennzahlen: 'Что означают эти числа?',
     erklKennzahlen1: '<strong>Общий расход</strong> складывает то, что появилось заново: то, что вы напечатали, то, что написал Claude, и разговор, впервые помещённый в промежуточную память.',
-    erklKennzahlen2: '<strong>Контекст перечитан</strong> намеренно стоит рядом, а не внутри. При каждом следующем вопросе прежний разговор считается заново. Это число растёт с длительностью сессии, а не с вашей работой — обычно оно в двадцать-тридцать раз больше настоящего расхода и сделало бы любую сумму бессмысленной.',
-    erklKennzahlen3: 'Токен — это примерно половина слова. Точные затраты Zählwerk посчитать не может: в журналах нет цен, а по подписке Claude Code и так не стоит ничего дополнительно.',
+    erklKennzahlen2: '<strong>Контекст перечитан</strong> намеренно стоит рядом, а не внутри. При каждом следующем вопросе прежний разговор считается заново. Это число растёт с длительностью сессии, а не с вашей работой. Обычно оно в двадцать-тридцать раз больше настоящего расхода и сделало бы любую сумму бессмысленной.',
+    erklKennzahlen3: 'Токен соответствует примерно половине слова. Точные затраты Zählwerk посчитать не может: в журналах нет цен, а по подписке Claude Code и так не стоит ничего дополнительно.',
 
     tageTitle: 'Последние 30 дней',
     erklTage: 'Как это читать?',
-    erklTage1: 'По одному столбцу на день, слева направо до сегодняшнего дня. Высота показывает расход этого дня относительно самого напряжённого дня периода. Дни без столбца — это дни, когда вы не работали с Claude Code.',
+    erklTage1: 'По одному столбцу на день, слева направо до сегодняшнего дня. Высота показывает расход этого дня относительно самого напряжённого дня периода. Если у дня нет столбца, в этот день вы не работали с Claude Code.',
 
     modelleTitle: 'По модели',
     erklModelle: 'Чем это интересно?',
@@ -846,7 +846,7 @@ var I18N = {
 
     ordnerTitle: 'По рабочей папке',
     erklOrdner: 'Откуда эти названия?',
-    erklOrdner1: 'Из каталога, в котором был запущен Claude Code. Показывается только последнее имя папки — и больше лишь тогда, когда две папки иначе выглядели бы одинаково.',
+    erklOrdner1: 'Из каталога, в котором был запущен Claude Code. Показывается только последнее имя папки (больше лишь тогда, когда две папки иначе выглядели бы одинаково).',
     erklOrdner2: 'Если почти всё собрано в одной строке, это просто значит, что вы обычно запускаете Claude Code из одного и того же каталога.',
 
     stundenTitle: 'По времени суток',
@@ -859,7 +859,7 @@ var I18N = {
     spBeginn: 'Начало', spDauer: 'Длительность', spOrdner: 'Папка',
     spAntworten: 'Ответы', spVerbrauch: 'Расход',
     erklSitzungen: 'Что считается сессией?',
-    erklSitzungen1: 'Один непрерывный разговор с Claude Code. Длительность — промежуток между первым и последним ответом; паузы учитываются, ведь Zählwerk не может знать, ходили вы за кофе или размышляли.',
+    erklSitzungen1: 'Один непрерывный разговор с Claude Code. Длительность считается от первого до последнего ответа. Паузы учитываются, ведь Zählwerk не может знать, ходили вы за кофе или размышляли.',
 
     zweigeTitle: 'По ветке Git',
     erklZweige: 'Зачем это нужно?',
@@ -867,13 +867,13 @@ var I18N = {
 
     technikTitle: 'Что было прочитано',
     erklTechnik: 'Почему здесь два разных числа?',
-    erklTechnik1: 'Один ответ встречается в журналах несколько раз — по одному разу на каждый блок, из которых он состоит: размышление, текст, вызов инструмента. Каждая такая строка несёт полный учёт всего ответа.',
+    erklTechnik1: 'Один ответ встречается в журналах несколько раз, по одному разу на каждый блок, из которых он состоит (размышление, текст, вызов инструмента). Каждая такая строка несёт полный учёт всего ответа.',
     erklTechnik2: 'Zählwerk это распознаёт и считает каждый ответ ровно один раз. Если просто сложить все строки, числа окажутся примерно вдвое больше.',
 
     ftQuellcode: 'Исходный код на GitHub', ftWerkstatt: 'Другие инструменты',
     ftLokal: 'Все вычисления идут в вашем браузере. Ваши журналы не загружаются никуда и не покидают устройство.',
-    ftHinweis: 'Часть переводов машинная — поправки приветствуются. Подсчёт посещений анонимный через GoatCounter, без файлов cookie.',
-    ftMarke: 'Zählwerk — частный инструмент, не связанный с Anthropic. «Claude» — товарный знак Anthropic PBC.',
+    ftHinweis: 'Часть переводов сделана автоматически, исправления приму с радостью. Подсчёт посещений анонимный через GoatCounter, без файлов cookie.',
+    ftMarke: 'Zählwerk является частным инструментом и не связан с Anthropic. «Claude» является товарным знаком Anthropic PBC.',
 
     lese: 'Чтение файла', fertigRechnen: 'Считаю …',
     fehlerKeine: 'В этой папке нет файлов .jsonl. Имеется в виду папка «projects» внутри «.claude», а не папка вашего собственного проекта.',
@@ -905,7 +905,7 @@ var I18N = {
     themeInvert: 'उलटे रंग',
 
     introTitle: 'फ़ोल्डर चुनें और शुरू करें',
-    introLead: 'Zählwerk उन लॉग को पढ़ता है जो Claude Code आपके कंप्यूटर पर बनाता है, और हिसाब लगाता है कि आपकी खपत कहाँ जा रही है। फ़ाइलें आपके डिवाइस पर ही रहती हैं — उन्हें लेने वाला कोई सर्वर है ही नहीं।',
+    introLead: 'Zählwerk उन लॉग को पढ़ता है जो Claude Code आपके कंप्यूटर पर बनाता है, और हिसाब लगाता है कि आपकी खपत कहाँ जा रही है। फ़ाइलें आपके डिवाइस पर ही रहती हैं, उन्हें लेने वाला कोई सर्वर है ही नहीं।',
     dropMain: 'फ़ोल्डर यहाँ खींचें या क्लिक करें',
     dropSub: 'केवल <code>.jsonl</code> फ़ाइलें पढ़ी जाती हैं',
     pfadTitle: 'फ़ोल्डर कहाँ है?',
@@ -921,7 +921,7 @@ var I18N = {
     kzGesamt: 'कुल खपत', kzCache: 'संदर्भ दोबारा पढ़ा गया',
     erklKennzahlen: 'इन आँकड़ों का क्या अर्थ है?',
     erklKennzahlen1: '<strong>कुल खपत</strong> उसे जोड़ती है जो नया बना: जो आपने लिखा, जो Claude ने लिखा, और वह बातचीत जो नई-नई अस्थायी स्मृति में रखी गई।',
-    erklKennzahlen2: '<strong>संदर्भ दोबारा पढ़ा गया</strong> जानबूझकर अलग रखा गया है, भीतर नहीं। हर अगले प्रश्न पर पिछली बातचीत फिर से गिनी जाती है। यह संख्या आपके काम से नहीं, सत्र की लंबाई से बढ़ती है — यह प्रायः असली खपत से बीस-तीस गुना होती है और किसी भी कुल योग को बेकार कर देती।',
+    erklKennzahlen2: '<strong>संदर्भ दोबारा पढ़ा गया</strong> जानबूझकर अलग रखा गया है, भीतर नहीं। हर अगले प्रश्न पर पिछली बातचीत फिर से गिनी जाती है। यह संख्या आपके काम से नहीं, सत्र की लंबाई से बढ़ती है। यह प्रायः असली खपत से बीस-तीस गुना होती है और किसी भी कुल योग को बेकार कर देती।',
     erklKennzahlen3: 'एक टोकन मोटे तौर पर आधा शब्द है। Zählwerk सटीक लागत नहीं निकाल सकता: लॉग में कोई दाम नहीं होता, और सदस्यता में Claude Code का वैसे भी कोई अतिरिक्त शुल्क नहीं है।',
 
     tageTitle: 'पिछले 30 दिन',
@@ -934,12 +934,12 @@ var I18N = {
 
     ordnerTitle: 'कार्य फ़ोल्डर के अनुसार',
     erklOrdner: 'ये नाम कहाँ से आते हैं?',
-    erklOrdner1: 'उस डायरेक्टरी से जहाँ से Claude Code शुरू किया गया था। केवल अंतिम फ़ोल्डर नाम दिखाया जाता है — और उससे अधिक तभी जब दो फ़ोल्डर एक जैसे दिखते।',
+    erklOrdner1: 'उस डायरेक्टरी से जहाँ से Claude Code शुरू किया गया था। केवल अंतिम फ़ोल्डर नाम दिखाया जाता है (उससे अधिक तभी जब दो फ़ोल्डर एक जैसे दिखते)।',
     erklOrdner2: 'यदि लगभग सब कुछ एक ही पंक्ति में है, तो इसका सीधा अर्थ है कि आप Claude Code प्रायः एक ही डायरेक्टरी से चलाते हैं।',
 
     stundenTitle: 'दिन के समय के अनुसार',
     erklStunden: 'इसे कैसे पढ़ें?',
-    erklStunden1: 'चौबीस स्तंभ, दिन के हर घंटे के लिए एक, पूरी अवधि में जोड़े गए। यह दिखाता है कि आप वास्तव में कब काम करते हैं — तब नहीं जब आप सोचते हैं कि करते हैं।',
+    erklStunden1: 'चौबीस स्तंभ, दिन के हर घंटे के लिए एक, पूरी अवधि में जोड़े गए। यह दिखाता है कि आप वास्तव में कब काम करते हैं, तब नहीं जब आप सोचते हैं कि करते हैं।',
 
     wochenTitle: 'सप्ताह के अनुसार',
 
@@ -947,7 +947,7 @@ var I18N = {
     spBeginn: 'आरंभ', spDauer: 'अवधि', spOrdner: 'फ़ोल्डर',
     spAntworten: 'उत्तर', spVerbrauch: 'खपत',
     erklSitzungen: 'सत्र किसे कहते हैं?',
-    erklSitzungen1: 'Claude Code के साथ एक निरंतर बातचीत। अवधि पहले और अंतिम उत्तर के बीच का अंतराल है — बीच के विराम भी गिने जाते हैं, क्योंकि Zählwerk यह नहीं जान सकता कि आप कॉफ़ी लेने गए थे या सोच रहे थे।',
+    erklSitzungen1: 'Claude Code के साथ एक निरंतर बातचीत। अवधि पहले और अंतिम उत्तर के बीच का अंतराल है। बीच के विराम भी गिने जाते हैं, क्योंकि Zählwerk यह नहीं जान सकता कि आप कॉफ़ी लेने गए थे या सोच रहे थे।',
 
     zweigeTitle: 'Git शाखा के अनुसार',
     erklZweige: 'यह किस काम का?',
@@ -955,16 +955,16 @@ var I18N = {
 
     technikTitle: 'क्या पढ़ा गया',
     erklTechnik: 'यहाँ दो अलग-अलग संख्याएँ क्यों हैं?',
-    erklTechnik1: 'एक ही उत्तर लॉग में कई बार आता है — उसके हर खंड के लिए एक बार: सोच, पाठ, उपकरण-आह्वान। इनमें से हर पंक्ति पूरे उत्तर का सम्पूर्ण हिसाब लिए होती है।',
+    erklTechnik1: 'एक ही उत्तर लॉग में कई बार आता है, उसके हर खंड के लिए एक बार (सोच, पाठ, उपकरण-आह्वान)। इनमें से हर पंक्ति पूरे उत्तर का सम्पूर्ण हिसाब लिए होती है।',
     erklTechnik2: 'Zählwerk इसे पहचानता है और हर उत्तर को ठीक एक बार गिनता है। यदि सारी पंक्तियाँ यूँ ही जोड़ दी जातीं, तो संख्याएँ लगभग दुगनी निकलतीं।',
 
     ftQuellcode: 'GitHub पर स्रोत कोड', ftWerkstatt: 'और उपकरण',
     ftLokal: 'सब कुछ आपके ब्राउज़र में ही गिना जाता है। आपके लॉग कहीं अपलोड नहीं होते और आपका डिवाइस नहीं छोड़ते।',
-    ftHinweis: 'कुछ अनुवाद मशीनी हैं — सुधार सादर आमंत्रित हैं। आगंतुक गणना GoatCounter द्वारा गुमनाम, बिना कुकी।',
+    ftHinweis: 'कुछ अनुवाद मशीन से किए गए हैं, सुधार मैं खुशी से लेता हूँ। आगंतुक गणना GoatCounter द्वारा गुमनाम, बिना कुकी।',
     ftMarke: 'Zählwerk एक निजी उपकरण है और Anthropic से इसका कोई संबंध नहीं। „Claude“ Anthropic PBC का ट्रेडमार्क है।',
 
     lese: 'फ़ाइल पढ़ी जा रही है', fertigRechnen: 'गणना हो रही है …',
-    fehlerKeine: 'इस फ़ोल्डर में कोई .jsonl फ़ाइल नहीं है। अभिप्राय „.claude“ के भीतर वाले „projects“ फ़ोल्डर से है — आपके अपने प्रोजेक्ट के फ़ोल्डर से नहीं।',
+    fehlerKeine: 'इस फ़ोल्डर में कोई .jsonl फ़ाइल नहीं है। अभिप्राय „.claude“ के भीतर वाले „projects“ फ़ोल्डर से है, आपके अपने प्रोजेक्ट के फ़ोल्डर से नहीं।',
     antworten_one: 'उत्तर', antworten_other: 'उत्तर',
     token_one: 'टोकन', token_other: 'टोकन',
     sitzungen_one: 'सत्र कुल', sitzungen_other: 'सत्र कुल',
@@ -993,7 +993,7 @@ var I18N = {
     themeInvert: '反转颜色',
 
     introTitle: '选择文件夹即可开始',
-    introLead: 'Zählwerk 读取 Claude Code 在你电脑上生成的日志，算出用量都花在了哪里。文件始终留在你的设备上——根本没有服务器可以接收它们。',
+    introLead: 'Zählwerk 读取 Claude Code 在你电脑上生成的日志，算出用量都花在了哪里。文件始终留在你的设备上，根本没有服务器可以接收它们。',
     dropMain: '把文件夹拖到这里，或点击选择',
     dropSub: '只读取 <code>.jsonl</code> 文件',
     pfadTitle: '文件夹在哪里？',
@@ -1009,7 +1009,7 @@ var I18N = {
     kzGesamt: '总用量', kzCache: '重复读取的上下文',
     erklKennzahlen: '这些数字是什么意思？',
     erklKennzahlen1: '<strong>总用量</strong>统计的是新产生的部分：你输入的内容、Claude 写出的内容，以及新写入缓存的对话。',
-    erklKennzahlen2: '<strong>重复读取的上下文</strong>特意放在旁边，而不是算在里面。每追问一次，之前的对话就会被再数一遍。因此这个数字随会话长度增长，而不是随你的工作量增长——它通常是真实用量的二三十倍，会让任何合计数字失去意义。',
+    erklKennzahlen2: '<strong>重复读取的上下文</strong>特意放在旁边，而不是算在里面。每追问一次，之前的对话就会被再数一遍。因此这个数字随会话长度增长，而不是随你的工作量增长。它通常是真实用量的二三十倍，会让任何合计数字失去意义。',
     erklKennzahlen3: '一个 token 大致相当于半个词。Zählwerk 无法算出准确费用：日志里没有价格，而在订阅制下使用 Claude Code 本就不额外收费。',
 
     tageTitle: '最近 30 天',
@@ -1022,12 +1022,12 @@ var I18N = {
 
     ordnerTitle: '按工作目录',
     erklOrdner: '这些名称从哪来？',
-    erklOrdner1: '来自启动 Claude Code 时所在的目录。只显示最后一级文件夹名——只有当两个文件夹重名时才多显示一层。',
+    erklOrdner1: '来自启动 Claude Code 时所在的目录。只显示最后一级文件夹名（只有当两个文件夹重名时才多显示一层）。',
     erklOrdner2: '如果几乎所有用量都集中在一条上，那只说明你通常都在同一个目录里运行 Claude Code。',
 
     stundenTitle: '按一天中的时段',
     erklStunden: '怎么看这张图？',
-    erklStunden1: '二十四根柱子，一小时一根，按整段时间累加。它显示你真正在什么时候工作——而不是你以为的那个时候。',
+    erklStunden1: '二十四根柱子，一小时一根，按整段时间累加。它显示你真正在什么时候工作，而不是你以为的那个时候。',
 
     wochenTitle: '按周',
 
@@ -1035,7 +1035,7 @@ var I18N = {
     spBeginn: '开始', spDauer: '时长', spOrdner: '文件夹',
     spAntworten: '回复数', spVerbrauch: '用量',
     erklSitzungen: '什么算一次会话？',
-    erklSitzungen1: '与 Claude Code 的一段连续对话。时长是首条与末条回复之间的间隔——中间的停顿也算在内，因为 Zählwerk 无从得知你是去倒咖啡了，还是在思考。',
+    erklSitzungen1: '与 Claude Code 的一段连续对话。时长是首条与末条回复之间的间隔。中间的停顿也算在内，因为 Zählwerk 无从得知你是去倒咖啡了，还是在思考。',
 
     zweigeTitle: '按 Git 分支',
     erklZweige: '这有什么用？',
@@ -1043,16 +1043,16 @@ var I18N = {
 
     technikTitle: '读取了什么',
     erklTechnik: '为什么这里有两个不同的数字？',
-    erklTechnik1: '同一条回复在日志里会出现多次——它由几个部分组成就出现几次：思考、正文、工具调用。而每一行都带着整条回复的完整计数。',
+    erklTechnik1: '同一条回复在日志里会出现多次，它由几个部分组成就出现几次（思考、正文、工具调用）。而每一行都带着整条回复的完整计数。',
     erklTechnik2: 'Zählwerk 能识别这一点，每条回复只数一次。若把所有行直接相加，得出的数字大约会翻一倍。',
 
     ftQuellcode: 'GitHub 上的源代码', ftWerkstatt: '更多工具',
     ftLokal: '一切都在你的浏览器里计算。你的日志不会被上传，也不会离开你的设备。',
-    ftHinweis: '部分翻译由机器生成——欢迎指正。访问统计通过 GoatCounter 匿名进行，不使用 Cookie。',
+    ftHinweis: '部分翻译由机器生成，我很乐意接受指正。访问统计通过 GoatCounter 匿名进行，不使用 Cookie。',
     ftMarke: 'Zählwerk 是个人工具，与 Anthropic 无关。「Claude」是 Anthropic PBC 的商标。',
 
     lese: '正在读取文件', fertigRechnen: '正在计算 …',
-    fehlerKeine: '这个文件夹里没有 .jsonl 文件。指的是「.claude」里面的「projects」文件夹——不是你自己项目的文件夹。',
+    fehlerKeine: '这个文件夹里没有 .jsonl 文件。指的是「.claude」里面的「projects」文件夹，不是你自己项目的文件夹。',
     antworten_one: '条回复', antworten_other: '条回复',
     token_one: '个 token', token_other: '个 token',
     sitzungen_one: '次会话', sitzungen_other: '次会话',
@@ -1081,7 +1081,7 @@ var I18N = {
     themeInvert: '色反転',
 
     introTitle: 'フォルダーを選ぶだけ',
-    introLead: 'Zählwerk は Claude Code がパソコンに残すログを読み取り、使用量の内訳を計算します。ファイルは端末から出ません——受け取るサーバーそのものが存在しないからです。',
+    introLead: 'Zählwerk は Claude Code がパソコンに残すログを読み取り、使用量の内訳を計算します。ファイルは端末から出ません。受け取るサーバーそのものが存在しないからです。',
     dropMain: 'フォルダーをここにドロップ、またはクリック',
     dropSub: '読み取るのは <code>.jsonl</code> ファイルのみです',
     pfadTitle: 'フォルダーの場所',
@@ -1115,7 +1115,7 @@ var I18N = {
 
     stundenTitle: '時間帯別',
     erklStunden: '見方',
-    erklStunden1: '1 日 24 時間ぶんの柱を、期間全体で合計したものです。自分が実際に作業している時間帯が分かります——そう思い込んでいる時間帯ではなく。',
+    erklStunden1: '1 日 24 時間ぶんの柱を、期間全体で合計したものです。そう思い込んでいる時間帯ではなく、自分が実際に作業している時間帯が分かります。',
 
     wochenTitle: '週別',
 
@@ -1169,7 +1169,7 @@ var I18N = {
     themeInvert: '색상 반전',
 
     introTitle: '폴더만 고르면 됩니다',
-    introLead: 'Zählwerk는 Claude Code가 컴퓨터에 남기는 기록을 읽어 사용량이 어디로 갔는지 계산합니다. 파일은 기기 밖으로 나가지 않습니다 — 받아 갈 서버 자체가 없기 때문입니다.',
+    introLead: 'Zählwerk는 Claude Code가 컴퓨터에 남기는 기록을 읽어 사용량이 어디로 갔는지 계산합니다. 파일은 기기 밖으로 나가지 않습니다. 받아 갈 서버 자체가 없기 때문입니다.',
     dropMain: '폴더를 여기에 끌어다 놓거나 클릭하세요',
     dropSub: '<code>.jsonl</code> 파일만 읽습니다',
     pfadTitle: '폴더 위치',
@@ -1203,7 +1203,7 @@ var I18N = {
 
     stundenTitle: '시간대별',
     erklStunden: '보는 법',
-    erklStunden1: '하루 24시간을 한 시간에 기둥 하나씩, 전체 기간에 걸쳐 합산했습니다. 실제로 언제 일하는지가 드러납니다 — 그렇게 여기던 시간대가 아니라.',
+    erklStunden1: '하루 24시간을 한 시간에 기둥 하나씩, 전체 기간에 걸쳐 합산했습니다. 그렇게 여기던 시간대가 아니라 실제로 언제 일하는지가 드러납니다.',
 
     wochenTitle: '주별',
 
@@ -1224,7 +1224,7 @@ var I18N = {
 
     ftQuellcode: 'GitHub 소스 코드', ftWerkstatt: '다른 도구',
     ftLokal: '모든 계산은 브라우저 안에서 이루어집니다. 기록은 어디로도 올라가지 않으며 기기를 벗어나지 않습니다.',
-    ftHinweis: '일부 번역은 기계 번역입니다 — 수정 제안을 환영합니다. 방문자 집계는 GoatCounter로 익명 처리되며 쿠키를 쓰지 않습니다.',
+    ftHinweis: '일부 번역은 기계 번역입니다. 수정 제안을 환영합니다. 방문자 집계는 GoatCounter로 익명 처리되며 쿠키를 쓰지 않습니다.',
     ftMarke: 'Zählwerk는 개인이 만든 도구이며 Anthropic과 무관합니다. ‘Claude’는 Anthropic PBC의 상표입니다.',
 
     lese: '파일 읽는 중', fertigRechnen: '계산 중 …',
