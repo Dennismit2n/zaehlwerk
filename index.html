@@ -65,7 +65,7 @@
   <main>
   <section id="einstieg" class="panel intro">
     <h2 data-i18n="introTitle">Ordner auswählen und loslegen</h2>
-    <p data-i18n="introLead">Zählwerk liest die Protokolle, die Claude Code auf deinem Rechner anlegt, und rechnet aus, wohin dein Verbrauch geht. Die Dateien bleiben dabei auf deinem Gerät — es gibt keinen Server, der sie entgegennehmen könnte.</p>
+    <p data-i18n="introLead">Zählwerk liest die Protokolle, die Claude Code auf deinem Rechner anlegt, und rechnet aus, wohin dein Verbrauch geht. Die Dateien bleiben dabei auf deinem Gerät, es gibt keinen Server, der sie entgegennehmen könnte.</p>
 
     <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-describedby="pfadhilfe">
       <svg viewBox="0 0 48 48" class="dropzone-icon" aria-hidden="true">
@@ -154,7 +154,7 @@
         <summary data-i18n="erklKennzahlen">Was bedeuten diese Zahlen?</summary>
         <div class="erklaerung-inhalt">
           <p data-i18n="erklKennzahlen1"><strong>Verbrauch gesamt</strong> zählt zusammen, was neu entstanden ist: was du getippt hast, was Claude geschrieben hat, und den Gesprächsverlauf, der neu in den Zwischenspeicher gelegt wurde.</p>
-          <p data-i18n="erklKennzahlen2"><strong>Kontext erneut gelesen</strong> steht bewußt daneben und nicht darin. Bei jeder Folgefrage wird der bisherige Verlauf noch einmal mitgezählt. Diese Zahl wächst also mit der Länge einer Sitzung, nicht mit deiner Arbeit — sie ist meist zwanzig- bis dreißigmal so groß wie der eigentliche Verbrauch und würde jede Gesamtsumme unbrauchbar machen.</p>
+          <p data-i18n="erklKennzahlen2">&lt;strong&gt;Kontext erneut gelesen&lt;/strong&gt; steht bewusst daneben und nicht darin. Bei jeder Folgefrage wird der bisherige Verlauf noch einmal mitgezählt. Diese Zahl wächst also mit der Länge einer Sitzung, nicht mit deiner Arbeit. Sie ist meist zwanzig- bis dreißigmal so groß wie der eigentliche Verbrauch und würde jede Gesamtsumme unbrauchbar machen.</p>
           <p data-i18n="erklKennzahlen3">Ein Token ist grob ein halbes Wort. Genaue Kosten kann Zählwerk nicht ausrechnen: In den Protokollen steht kein Preis, und im Abonnement kostet Claude Code ohnehin nichts zusätzlich.</p>
         </div>
       </details>
@@ -190,7 +190,7 @@
         <details class="erklaerung">
           <summary data-i18n="erklOrdner">Woher kommen diese Namen?</summary>
           <div class="erklaerung-inhalt">
-            <p data-i18n="erklOrdner1">Aus dem Verzeichnis, in dem Claude Code jeweils gestartet wurde. Gezeigt wird nur der letzte Ordnername — und nur dann mehr, wenn zwei Ordner sonst gleich hießen.</p>
+            <p data-i18n="erklOrdner1">Aus dem Verzeichnis, in dem Claude Code jeweils gestartet wurde. Gezeigt wird nur der letzte Ordnername (mehr nur dann, wenn zwei Ordner sonst gleich hießen).</p>
             <p data-i18n="erklOrdner2">Wenn hier fast alles unter einem einzigen Eintrag steht, heißt das schlicht, daß du Claude Code meist aus demselben Verzeichnis heraus benutzt.</p>
           </div>
         </details>
@@ -204,7 +204,7 @@
       <details class="erklaerung">
         <summary data-i18n="erklStunden">Wie liest man das?</summary>
         <div class="erklaerung-inhalt">
-          <p data-i18n="erklStunden1">Vierundzwanzig Säulen, eine je Stunde deines Tages, über den gesamten Zeitraum aufsummiert. Zeigt, wann du tatsächlich arbeitest — nicht wann du glaubst zu arbeiten.</p>
+          <p data-i18n="erklStunden1">Vierundzwanzig Säulen, eine je Stunde deines Tages, über den gesamten Zeitraum aufsummiert. Zeigt, wann du tatsächlich arbeitest, nicht wann du glaubst zu arbeiten.</p>
         </div>
       </details>
     </section>
@@ -236,7 +236,7 @@
       <details class="erklaerung">
         <summary data-i18n="erklSitzungen">Was ist eine Sitzung?</summary>
         <div class="erklaerung-inhalt">
-          <p data-i18n="erklSitzungen1">Ein durchgehendes Gespräch mit Claude Code. Die Dauer ist der Abstand zwischen der ersten und der letzten Antwort — Pausen dazwischen zählen mit, denn Zählwerk kann nicht wissen, ob du Kaffee geholt oder nachgedacht hast.</p>
+          <p data-i18n="erklSitzungen1">Ein durchgehendes Gespräch mit Claude Code. Die Dauer ist der Abstand zwischen der ersten und der letzten Antwort. Pausen dazwischen zählen mit, denn Zählwerk kann nicht wissen, ob du Kaffee geholt oder nachgedacht hast.</p>
         </div>
       </details>
     </section>
@@ -261,7 +261,7 @@
       <details class="erklaerung">
         <summary data-i18n="erklTechnik">Warum stehen hier zwei verschiedene Zahlen?</summary>
         <div class="erklaerung-inhalt">
-          <p data-i18n="erklTechnik1">Eine einzelne Antwort steht mehrfach in den Protokollen — einmal je Block, aus dem sie besteht: Nachdenken, Text, Werkzeugaufruf. Jede dieser Zeilen trägt die vollständige Abrechnung der ganzen Antwort.</p>
+          <p data-i18n="erklTechnik1">Eine einzelne Antwort steht mehrfach in den Protokollen, einmal je Block, aus dem sie besteht (Nachdenken, Text, Werkzeugaufruf). Jede dieser Zeilen trägt die vollständige Abrechnung der ganzen Antwort.</p>
           <p data-i18n="erklTechnik2">Zählwerk erkennt das und zählt jede Antwort genau einmal. Würde man einfach alle Zeilen zusammenzählen, kämen ungefähr doppelt so hohe Zahlen heraus.</p>
         </div>
       </details>
@@ -276,7 +276,7 @@
       · <a href="https://dennismit2n.github.io/" rel="noopener" data-i18n="ftWerkstatt">Mehr Werkzeuge</a>
     </p>
     <p class="klein" data-i18n="ftLokal">Alles rechnet in deinem Browser. Deine Protokolle werden nicht hochgeladen und verlassen dein Gerät nicht.</p>
-    <p class="klein" data-i18n="ftHinweis">Übersetzungen teils maschinell — Korrekturen willkommen. Besucherzählung anonym per GoatCounter, ohne Cookies.</p>
+    <p class="klein" data-i18n="ftHinweis">Übersetzungen teils maschinell, Korrekturen nehme ich gern an. Besucherzählung anonym per GoatCounter, ohne Cookies.</p>
     <p class="klein" data-i18n="ftMarke">Zählwerk ist ein privates Werkzeug und steht in keiner Verbindung zu Anthropic. „Claude“ ist eine Marke von Anthropic PBC.</p>
     <p class="klein">© 2026 Dennis_mit_2n</p>
   </footer>

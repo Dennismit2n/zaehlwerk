@@ -113,7 +113,7 @@
     var protokolle = dateien.filter(istProtokoll);
     if (!protokolle.length) {
       fehlerZeigen(t('fehlerKeine',
-        'In diesem Ordner liegen keine .jsonl-Dateien. Gemeint ist der Ordner "projects" innerhalb von ".claude" — nicht der Projektordner deines eigenen Vorhabens.'));
+        'In diesem Ordner liegen keine .jsonl-Dateien. Gemeint ist der Ordner "projects" innerhalb von ".claude", nicht der Projektordner deines eigenen Vorhabens.'));
       return;
     }
 
@@ -231,7 +231,7 @@
     });
 
     E('tageAlt').textContent = beschreibung.length
-      ? t('tageAlt', 'Verbrauch je Tag') + ' — ' + beschreibung.join(', ')
+      ? t('tageAlt', 'Verbrauch je Tag') + '. ' + beschreibung.join(', ')
       : t('tageLeer', 'In den letzten 30 Tagen keine Nutzung.');
   }
 
@@ -245,7 +245,7 @@
       var saeule = document.createElement('div');
       saeule.className = 'saeule' + (s.echt === 0 ? ' saeule-leer' : '');
       var label = String(s.stunde).padStart(2, '0') + ':00';
-      saeule.title = label + ' – ' + mengen('token', s.echt);
+      saeule.title = label + ', ' + mengen('token', s.echt);
 
       var fuell = document.createElement('div');
       fuell.className = 'saeule-fuell';
