@@ -25,8 +25,6 @@
        sonst der alte Schlüssel), sonst entscheidet das System per CSS. data-vision trägt Hoher
        Kontrast, Farbenblind und Umkehr; dieselbe Auflösung steht in js/app.js (darstellen). -->
   <script>(function(){var v=null,r=document.documentElement,m=window.matchMedia,t=null,s=null;try{v=localStorage.getItem('werkstatt.darstellung')||localStorage.getItem('zaehlwerk.theme');}catch(e){}var d=!!(m&&m('(prefers-color-scheme: dark)').matches),k=!!(m&&m('(prefers-contrast: more)').matches);if(v==='light'||v==='dark'){t=v;}else if(v==='hc-dark'||v==='hc-light'){t=v.slice(3);s='contrast';}else if(v==='cvd-dark'||v==='cvd-light'){t=v.slice(4);s='cvd';}else if(v==='invert'){s='invert';}else if(v&&/dark/.test(v)){t='dark';}else if(v&&/light/.test(v)){t='light';}else if(k){t=d?'dark':'light';s='contrast';}if(t){r.setAttribute('data-theme',t);}if(s){r.setAttribute('data-vision',s);}})();</script>
-  <!-- GoatCounter, anonym und ohne Cookies — im Fußbereich offengelegt. -->
-  <script data-goatcounter="https://dennis-mit-2n.goatcounter.com/count" async src="./js/vendor/count.js"></script>
 </head>
 <body>
 <div class="app-shell">
@@ -276,7 +274,7 @@
       · <a href="https://dennismit2n.github.io/" rel="noopener" data-i18n="ftWerkstatt">Mehr Werkzeuge</a>
     </p>
     <p class="klein" data-i18n="ftLokal">Alles rechnet in deinem Browser. Deine Protokolle werden nicht hochgeladen und verlassen dein Gerät nicht.</p>
-    <p class="klein" data-i18n="ftHinweis">Übersetzungen teils maschinell, Korrekturen nehme ich gern an. Besucherzählung anonym per GoatCounter, ohne Cookies.</p>
+    <p class="klein" data-i18n="ftHinweis">Übersetzungen teils maschinell, Korrekturen nehme ich gern an.</p>
     <p class="klein" data-i18n="ftMarke">Zählwerk ist ein privates Werkzeug und steht in keiner Verbindung zu Anthropic. „Claude“ ist eine Marke von Anthropic PBC.</p>
     <p class="klein">© 2026 Dennis_mit_2n</p>
   </footer>

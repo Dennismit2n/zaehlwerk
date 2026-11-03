@@ -80,7 +80,7 @@ var I18N = {
 
     ftQuellcode: 'Quellcode auf GitHub', ftWerkstatt: 'Mehr Werkzeuge',
     ftLokal: 'Alles rechnet in deinem Browser. Deine Protokolle werden nicht hochgeladen und verlassen dein Gerät nicht.',
-    ftHinweis: 'Übersetzungen teils maschinell, Korrekturen nehme ich gern an. Besucherzählung anonym per GoatCounter, ohne Cookies.',
+    ftHinweis: 'Übersetzungen teils maschinell, Korrekturen nehme ich gern an.',
     ftMarke: 'Zählwerk ist ein privates Werkzeug und steht in keiner Verbindung zu Anthropic. „Claude“ ist eine Marke von Anthropic PBC.',
 
     lese: 'Lese Datei', fertigRechnen: 'Rechne …',
@@ -168,7 +168,7 @@ var I18N = {
 
     ftQuellcode: 'Source code on GitHub', ftWerkstatt: 'More tools',
     ftLokal: 'Everything is computed in your browser. Your logs are never uploaded and do not leave your device.',
-    ftHinweis: 'Some translations are machine-made, and I’m happy to take corrections. Visitor counting is anonymous via GoatCounter, without cookies.',
+    ftHinweis: 'Some translations are machine-made, and I’m happy to take corrections.',
     ftMarke: 'Zählwerk is a personal tool and is not affiliated with Anthropic. “Claude” is a trademark of Anthropic PBC.',
 
     lese: 'Reading file', fertigRechnen: 'Calculating …',
@@ -256,7 +256,7 @@ var I18N = {
 
     ftQuellcode: 'Código fuente en GitHub', ftWerkstatt: 'Más herramientas',
     ftLokal: 'Todo se calcula en tu navegador. Tus registros no se suben ni salen de tu dispositivo.',
-    ftHinweis: 'Algunas traducciones son automáticas; se agradecen las correcciones. Recuento de visitas anónimo mediante GoatCounter, sin cookies.',
+    ftHinweis: 'Algunas traducciones son automáticas; se agradecen las correcciones.',
     ftMarke: 'Zählwerk es una herramienta personal y no está afiliada a Anthropic. «Claude» es una marca de Anthropic PBC.',
 
     lese: 'Leyendo archivo', fertigRechnen: 'Calculando …',
@@ -344,7 +344,7 @@ var I18N = {
 
     ftQuellcode: 'Code source sur GitHub', ftWerkstatt: 'Plus d’outils',
     ftLokal: 'Tout est calculé dans votre navigateur. Vos journaux ne sont jamais téléversés et ne quittent pas votre appareil.',
-    ftHinweis: 'Certaines traductions sont automatiques, j’accepte volontiers les corrections. Comptage des visites anonyme via GoatCounter, sans cookies.',
+    ftHinweis: 'Certaines traductions sont automatiques, j’accepte volontiers les corrections.',
     ftMarke: 'Zählwerk est un outil personnel, sans lien avec Anthropic. « Claude » est une marque d’Anthropic PBC.',
 
     lese: 'Lecture du fichier', fertigRechnen: 'Calcul en cours …',
@@ -432,7 +432,7 @@ var I18N = {
 
     ftQuellcode: 'Codice sorgente su GitHub', ftWerkstatt: 'Altri strumenti',
     ftLokal: 'Tutto viene calcolato nel tuo browser. I tuoi registri non vengono caricati e non lasciano il dispositivo.',
-    ftHinweis: 'Alcune traduzioni sono automatiche: le correzioni sono benvenute. Conteggio visite anonimo tramite GoatCounter, senza cookie.',
+    ftHinweis: 'Alcune traduzioni sono automatiche: le correzioni sono benvenute.',
     ftMarke: 'Zählwerk è uno strumento personale e non è affiliato ad Anthropic. «Claude» è un marchio di Anthropic PBC.',
 
     lese: 'Lettura del file', fertigRechnen: 'Calcolo in corso …',
@@ -520,7 +520,7 @@ var I18N = {
 
     ftQuellcode: 'Broncode op GitHub', ftWerkstatt: 'Meer gereedschap',
     ftLokal: 'Alles wordt in je browser berekend. Je logboeken worden niet geüpload en verlaten je apparaat niet.',
-    ftHinweis: 'Sommige vertalingen zijn machinaal gemaakt, correcties neem ik graag aan. Bezoekerstelling anoniem via GoatCounter, zonder cookies.',
+    ftHinweis: 'Sommige vertalingen zijn machinaal gemaakt, correcties neem ik graag aan.',
     ftMarke: 'Zählwerk is een persoonlijk gereedschap en heeft geen enkele band met Anthropic. “Claude” is een handelsmerk van Anthropic PBC.',
 
     lese: 'Bestand inlezen', fertigRechnen: 'Berekenen …',
@@ -608,7 +608,7 @@ var I18N = {
 
     ftQuellcode: 'Kod źródłowy na GitHubie', ftWerkstatt: 'Więcej narzędzi',
     ftLokal: 'Wszystkie obliczenia odbywają się w Twojej przeglądarce. Twoje dzienniki nie są nigdzie wysyłane i nie opuszczają Twojego urządzenia.',
-    ftHinweis: 'Część tłumaczeń powstała maszynowo, chętnie przyjmę poprawki. Anonimowe zliczanie odwiedzin przez GoatCounter, bez ciasteczek.',
+    ftHinweis: 'Część tłumaczeń powstała maszynowo, chętnie przyjmę poprawki.',
     ftMarke: 'Zählwerk jest prywatnym narzędziem i nie ma żadnego związku z Anthropic. „Claude” to znak towarowy firmy Anthropic PBC.',
 
     lese: 'Wczytywanie pliku', fertigRechnen: 'Obliczanie …',
@@ -696,7 +696,7 @@ var I18N = {
 
     ftQuellcode: 'Código-fonte no GitHub', ftWerkstatt: 'Mais ferramentas',
     ftLokal: 'Tudo é calculado no seu navegador. Seus registros não são enviados e não saem do seu dispositivo.',
-    ftHinweis: 'Algumas traduções são automáticas. Correções são bem-vindas. Contagem de visitas anônima via GoatCounter, sem cookies.',
+    ftHinweis: 'Algumas traduções são automáticas. Correções são bem-vindas.',
     ftMarke: 'O Zählwerk é uma ferramenta pessoal e não tem nenhuma relação com a Anthropic. “Claude” é uma marca da Anthropic PBC.',
 
     lese: 'Lendo arquivo', fertigRechnen: 'Calculando …',
@@ -784,7 +784,7 @@ var I18N = {
 
     ftQuellcode: 'GitHub’da kaynak kodu', ftWerkstatt: 'Diğer araçlar',
     ftLokal: 'Her şey tarayıcınızda hesaplanır. Kayıtlarınız yüklenmez ve cihazınızdan çıkmaz.',
-    ftHinweis: 'Bazı çeviriler otomatik oluşturuldu, düzeltmeleri memnuniyetle alırım. Ziyaretçi sayımı GoatCounter ile anonim, çerezsiz.',
+    ftHinweis: 'Bazı çeviriler otomatik oluşturuldu, düzeltmeleri memnuniyetle alırım.',
     ftMarke: 'Zählwerk kişisel bir araçtır ve Anthropic ile bağlantısı yoktur. „Claude“, Anthropic PBC’nin markasıdır.',
 
     lese: 'Dosya okunuyor', fertigRechnen: 'Hesaplanıyor …',
@@ -872,7 +872,7 @@ var I18N = {
 
     ftQuellcode: 'Исходный код на GitHub', ftWerkstatt: 'Другие инструменты',
     ftLokal: 'Все вычисления идут в вашем браузере. Ваши журналы не загружаются никуда и не покидают устройство.',
-    ftHinweis: 'Часть переводов сделана автоматически, исправления приму с радостью. Подсчёт посещений анонимный через GoatCounter, без файлов cookie.',
+    ftHinweis: 'Часть переводов сделана автоматически, исправления приму с радостью.',
     ftMarke: 'Zählwerk является частным инструментом и не связан с Anthropic. «Claude» является товарным знаком Anthropic PBC.',
 
     lese: 'Чтение файла', fertigRechnen: 'Считаю …',
@@ -960,7 +960,7 @@ var I18N = {
 
     ftQuellcode: 'GitHub पर स्रोत कोड', ftWerkstatt: 'और उपकरण',
     ftLokal: 'सब कुछ आपके ब्राउज़र में ही गिना जाता है। आपके लॉग कहीं अपलोड नहीं होते और आपका डिवाइस नहीं छोड़ते।',
-    ftHinweis: 'कुछ अनुवाद मशीन से किए गए हैं, सुधार मैं खुशी से लेता हूँ। आगंतुक गणना GoatCounter द्वारा गुमनाम, बिना कुकी।',
+    ftHinweis: 'कुछ अनुवाद मशीन से किए गए हैं, सुधार मैं खुशी से लेता हूँ।',
     ftMarke: 'Zählwerk एक निजी उपकरण है और Anthropic से इसका कोई संबंध नहीं। „Claude“ Anthropic PBC का ट्रेडमार्क है।',
 
     lese: 'फ़ाइल पढ़ी जा रही है', fertigRechnen: 'गणना हो रही है …',
@@ -1048,7 +1048,7 @@ var I18N = {
 
     ftQuellcode: 'GitHub 上的源代码', ftWerkstatt: '更多工具',
     ftLokal: '一切都在你的浏览器里计算。你的日志不会被上传，也不会离开你的设备。',
-    ftHinweis: '部分翻译由机器生成，我很乐意接受指正。访问统计通过 GoatCounter 匿名进行，不使用 Cookie。',
+    ftHinweis: '部分翻译由机器生成，我很乐意接受指正。',
     ftMarke: 'Zählwerk 是个人工具，与 Anthropic 无关。「Claude」是 Anthropic PBC 的商标。',
 
     lese: '正在读取文件', fertigRechnen: '正在计算 …',
@@ -1136,7 +1136,7 @@ var I18N = {
 
     ftQuellcode: 'GitHub のソースコード', ftWerkstatt: 'ほかの道具',
     ftLokal: '計算はすべてブラウザー内で行われます。ログがアップロードされることはなく、端末から出ることもありません。',
-    ftHinweis: '一部の翻訳は機械によるものです。修正のご指摘を歓迎します。訪問者数は GoatCounter により匿名で計測し、Cookie は使いません。',
+    ftHinweis: '一部の翻訳は機械によるものです。修正のご指摘を歓迎します。',
     ftMarke: 'Zählwerk は個人の道具であり、Anthropic とは関係ありません。「Claude」は Anthropic PBC の商標です。',
 
     lese: 'ファイルを読み込み中', fertigRechnen: '計算中 …',
@@ -1224,7 +1224,7 @@ var I18N = {
 
     ftQuellcode: 'GitHub 소스 코드', ftWerkstatt: '다른 도구',
     ftLokal: '모든 계산은 브라우저 안에서 이루어집니다. 기록은 어디로도 올라가지 않으며 기기를 벗어나지 않습니다.',
-    ftHinweis: '일부 번역은 기계 번역입니다. 수정 제안을 환영합니다. 방문자 집계는 GoatCounter로 익명 처리되며 쿠키를 쓰지 않습니다.',
+    ftHinweis: '일부 번역은 기계 번역입니다. 수정 제안을 환영합니다.',
     ftMarke: 'Zählwerk는 개인이 만든 도구이며 Anthropic과 무관합니다. ‘Claude’는 Anthropic PBC의 상표입니다.',
 
     lese: '파일 읽는 중', fertigRechnen: '계산 중 …',
