@@ -39,8 +39,6 @@ You do not have to take that on trust — it is checkable:
 
 One thing is worth knowing: these log files contain **every word of every conversation**. Zählwerk reads only the accounting lines and never displays conversation content — but the files are sensitive, and you should know that before handing them to any tool, including this one.
 
-Visitor counting uses **GoatCounter** — anonymous, no cookies, `count.js` served from this repository. That is the one request that does leave, and it carries no information about your files.
-
 ## Under the hood
 
 Static page, no build step, no dependencies.

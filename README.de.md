@@ -39,8 +39,6 @@ Das mußt du nicht glauben — es ist nachprüfbar:
 
 Eines solltest du wissen: In diesen Protokolldateien steht **jedes Wort jedes Gesprächs**. Zählwerk liest davon nur die Abrechnungszeilen und zeigt niemals Gesprächsinhalte an — aber die Dateien sind heikel, und das gehört gesagt, bevor man sie irgendeinem Werkzeug übergibt, auch diesem.
 
-Die Besucherzählung läuft über **GoatCounter** — anonym, ohne Cookies, `count.js` liegt in diesem Repository. Das ist die eine Anfrage, die hinausgeht, und sie trägt nichts über deine Dateien mit sich.
-
 ## Unter der Haube
 
 Statische Seite, kein Build-Schritt, keine Abhängigkeiten.
