@@ -534,4 +534,7 @@ body {
 }
 /* Hoher Kontrast kennt keine Schatten, der Beschlag bleibt. Gedruckt wird ohne beides. */
 :root[data-vision="contrast"] :is(.mini-select, .panel, .ticker-hinweis, .knopf-leise) { box-shadow: none; }
+@media print {
+  .mini-select, .panel, .dropzone, .ticker-hinweis, .kennzahl, .knopf-leise, .fehler { background-image: none !important; box-shadow: none !important; }
+}
 /* Ende Beschlag */
