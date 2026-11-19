@@ -2,7 +2,7 @@
 
 **Where does your Claude Code usage actually go?** Pick a folder, and Zählwerk reads the logs Claude Code writes on your own machine, then breaks the numbers down by day, model, project, week and hour.
 
-![Browser](https://img.shields.io/badge/Runs-in%20your%20browser-a3e635) ![No upload](https://img.shields.io/badge/Logs-never%20uploaded-4d7c0f) ![Languages](https://img.shields.io/badge/Languages-14-65a30d) ![Licence](https://img.shields.io/badge/Licence-MIT-6ee7b7)
+![Browser](https://img.shields.io/badge/Runs-in%20your%20browser-a3e635) ![No upload](https://img.shields.io/badge/Logs-never%20uploaded-4d7c0f) ![Languages](https://img.shields.io/badge/Languages-14-65a30d) ![License](https://img.shields.io/badge/License-MIT-6ee7b7)
 
 **→ [dennismit2n.github.io/zaehlwerk](https://dennismit2n.github.io/zaehlwerk/)** · [Deutsche Fassung dieser Datei](README.de.md)
 
@@ -45,7 +45,7 @@ Static page, no build step, no dependencies.
 
 | File | Lines | Purpose |
 |---|---:|---|
-| `js/auswertung.js` | 321 | the maths, runs in the browser and under Node, so it can be tested against real files |
+| `js/auswertung.js` | 321 | the math, runs in the browser and under Node, so it can be tested against real files |
 | `js/app.js` | 534 | reading files, progress, drawing every view |
 | `js/i18n.js` | 1247 | 14 languages, around 90 keys each, more where the language needs its own plural forms |
 | `css/style.css` | 429 | light and dark, one variable set each, plus the vision modes |
@@ -61,7 +61,7 @@ Deutsch · English · Español · Français · Italiano · Nederlands · Polski 
 
 Some translations are machine-generated. Corrections are very welcome: open an issue or a pull request.
 
-## Licence
+## License
 
 MIT, see [LICENSE](LICENSE). Use it, read it, fork it, improve it.
 

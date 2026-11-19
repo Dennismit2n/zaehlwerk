@@ -108,9 +108,9 @@ var I18N = {
     themeSystem: 'System', themeLight: 'Light', themeDark: 'Dark',
     themeHcDark: 'High contrast dark',
     themeHcLight: 'High contrast light',
-    themeCvdDark: 'Colour-blind dark',
-    themeCvdLight: 'Colour-blind light',
-    themeInvert: 'Inverted colours',
+    themeCvdDark: 'Color-blind dark',
+    themeCvdLight: 'Color-blind light',
+    themeInvert: 'Inverted colors',
 
     introTitle: 'Pick a folder and go',
     introLead: 'Zählwerk reads the logs Claude Code writes on your machine and works out where your usage goes. The files stay on your device, there is no server that could receive them.',
@@ -155,7 +155,7 @@ var I18N = {
     spBeginn: 'Start', spDauer: 'Duration', spOrdner: 'Folder',
     spAntworten: 'Replies', spVerbrauch: 'Usage',
     erklSitzungen: 'What counts as a session?',
-    erklSitzungen1: 'One continuous conversation with Claude Code. The duration is the span between the first and last reply. Breaks count towards it, because Zählwerk cannot tell whether you fetched coffee or were thinking.',
+    erklSitzungen1: 'One continuous conversation with Claude Code. The duration is the span between the first and last reply. Breaks count toward it, because Zählwerk cannot tell whether you fetched coffee or were thinking.',
 
     zweigeTitle: 'By Git branch',
     erklZweige: 'What is this for?',
